@@ -144,21 +144,6 @@ class PurposeDrivenAIAgent(AssistantAgent):
             await self.guide_actions()
             await asyncio.sleep(self.interval) # Pause for the specified interval
 
-# Example usage with a hypothetical LLM object:
-class LargeLanguageModel:
-    async def generate(self, prompt):
-        """
-        Simulate the generate method of a large language model.
-
-        Parameters:
-        - prompt (str): The prompt to generate a response for.
-
-        Returns:
-        - str: The generated action description based on the prompt.
-        """
-        await asyncio.sleep(1) # Simulate some delay
-        return f"Generated action based on prompt: {prompt}"
-
 domain_knowledge = """
 Physics: Basic concepts of motion, force, and energy.
 AI Research: Current trends and methodologies in artificial intelligence.

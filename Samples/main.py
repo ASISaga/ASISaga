@@ -1,5 +1,6 @@
 import asyncio
-from PurposeDrivenAIAgent import PurposeDrivenAIAgent, LargeLanguageModel
+from PurposeDrivenAIAgent import PurposeDrivenAIAgent
+from LargeLanguageModel import LargeLanguageModel
 
 domain_knowledge = """
 Physics: Basic concepts of motion, force, and energy.
