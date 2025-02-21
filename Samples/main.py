@@ -1,5 +1,5 @@
 import asyncio
-from PurposeDrivenAIAgent import PurposeDrivenAIAgent
+from PurposeDrivenAIAgent import MarketingAgent, FinanceAgent, AccountsAgent, PurchaseAgent, OperationsAgent, HRAgent, QualityAgent
 from LargeLanguageModel import LargeLanguageModel
 
 domain_knowledge = """
@@ -9,7 +9,7 @@ Education: Effective teaching strategies and methods for knowledge dissemination
 """
 
 llm = LargeLanguageModel()
-agent1 = PurposeDrivenAIAgent("Facilitate human learning and growth", llm, domain_knowledge, interval=10)
+agent1 = MarketingAgent("Facilitate human learning and growth", llm, domain_knowledge, interval=10)
 
 async def main():
     await agent1.learn("Physics", "Basic concepts of motion, force, and energy")

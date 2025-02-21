@@ -1,8 +1,8 @@
 import asyncio
+from abc import ABC, abstractmethod
 from autogen_agentchat.agents import AssistantAgent
-#from autogen.models import BaseLanguageModel
 
-class PurposeDrivenAIAgent(AssistantAgent):
+class PurposeDrivenAIAgent(AssistantAgent, ABC):
     def __init__(self, purpose, llm, domain_knowledge, interval=5):
         """
         Initialize the AI agent with a specific purpose, large language model (LLM),
@@ -23,7 +23,6 @@ class PurposeDrivenAIAgent(AssistantAgent):
         self.llm = llm
         self.domain_knowledge = domain_knowledge # Persistent domain-specific knowledge
         self.interval = interval # Time interval in seconds for regeneration
-        self.lan
 
     async def log_action(self, action):
         """
@@ -143,6 +142,10 @@ class PurposeDrivenAIAgent(AssistantAgent):
             await self.evaluate_opportunities()
             await self.guide_actions()
             await asyncio.sleep(self.interval) # Pause for the specified interval
+
+    @abstractmethod
+    def specific_task(self):
+        pass
 
 domain_knowledge = """
 Physics: Basic concepts of motion, force, and energy.
