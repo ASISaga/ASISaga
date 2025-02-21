@@ -110,3 +110,31 @@ The `PurposeDrivenAIAgent` class represents an AI agent designed to perpetually 
   Continuously works towards the purpose by evaluating opportunities and guiding actions at regular intervals.
 
 ---
+## Create and activate python virtual environment
+
+!python3 -m venv .venv
+!source .venv/bin/activate
+
+## To deactivate later:
+!deactivate
+
+# On Windows
+python -m venv .venv
+.venv\Scripts\activate
+.venv\Scripts\deactivate
+
+# install autogen studio
+! pip install -U autogenstudio
+
+# install autogen chat
+! pip install -U "autogen-agentchat"
+
+# install autogen OpenAI for Model Client
+!pip install "autogen-ext[openai]"
+
+# install autogen core
+!pip install "autogen-core"
+
+# run AutoGen Studio GUI
+!autogenstudio ui --host <host> --port 8000
+ 
