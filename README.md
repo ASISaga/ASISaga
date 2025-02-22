@@ -140,4 +140,12 @@ python -m venv .venv
 
 # run AutoGen Studio GUI
 !autogenstudio ui --host <host> --port 8000
- 
+
+# Install Magentic One modules
+
+pip install "autogen-ext[magentic-one]"
+
+pip install "autogen-ext[web-surfer]"
+
+pip install "autogen-ext[file-surfer]"
+

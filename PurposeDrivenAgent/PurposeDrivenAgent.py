@@ -5,7 +5,7 @@ from PurposeDrivenAgent.LargeLanguageModel import LargeLanguageModel
 
 llm = LargeLanguageModel()
 
-class PurposeDrivenAIAgent(AssistantAgent, ABC):
+class PurposeDrivenAgent(AssistantAgent, ABC):
     def __init__(self, purpose, interval=5):
         """
         Initialize the AI agent with a specific purpose, large language model (LLM),
