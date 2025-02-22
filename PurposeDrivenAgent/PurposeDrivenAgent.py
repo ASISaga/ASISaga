@@ -6,15 +6,14 @@ from PurposeDrivenAgent.LargeLanguageModel import LargeLanguageModel
 llm = LargeLanguageModel()
 
 class PurposeDrivenAIAgent(AssistantAgent, ABC):
-    def __init__(self, purpose, llm, domain_knowledge, interval=5):
+    def __init__(self, purpose, interval=5):
         """
         Initialize the AI agent with a specific purpose, large language model (LLM),
-        persistent domain-specific knowledge, and a time interval for action regeneration.
+        and a time interval for action regeneration.
 
         Parameters:
         - purpose (str): The core purpose that drives the agent.
         - llm: The large language model used for generating actions.
-        - domain_knowledge (str): Text-based domain-specific knowledge.
         - interval (int): Time interval in seconds for regenerating actions.
         """
         self.purpose = purpose
@@ -22,10 +21,24 @@ class PurposeDrivenAIAgent(AssistantAgent, ABC):
         self.connected_agents = []
         self.log = []
         self.pull_forces = {}
-        self.drive = 1.0 # Default drive level, can be adjusted
+        self.drive = 1.0
         self.llm = llm
-        self.domain_knowledge = domain_knowledge # Persistent domain-specific knowledge
-        self.interval = interval # Time interval in seconds for regeneration
+        self.domain_knowledge = asyncio.run(self.generate_domain_knowledge(purpose))
+        self.interval = interval
+
+    async def generate_domain_knowledge(self, purpose):
+        """
+        Generate domain-specific knowledge based on the purpose using the LLM.
+
+        Parameters:
+        - purpose (str): The core purpose that drives the agent.
+
+        Returns:
+        - str: The generated domain-specific knowledge.
+        """
+        prompt = f"Generate domain-specific knowledge based on the purpose: '{purpose}'."
+        response = await self.llm.generate(prompt)
+        return response
 
     async def log_action(self, action):
         """
@@ -149,9 +162,3 @@ class PurposeDrivenAIAgent(AssistantAgent, ABC):
     @abstractmethod
     def specific_task(self):
         pass
-
-domain_knowledge = """
-Physics: Basic concepts of motion, force, and energy.
-AI Research: Current trends and methodologies in artificial intelligence.
-Education: Effective teaching strategies and methods for knowledge dissemination.
-"""
