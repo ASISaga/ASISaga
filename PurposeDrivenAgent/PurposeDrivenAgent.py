@@ -1,6 +1,9 @@
 import asyncio
 from abc import ABC, abstractmethod
 from autogen_agentchat.agents import AssistantAgent
+from PurposeDrivenAgent.LargeLanguageModel import LargeLanguageModel
+
+llm = LargeLanguageModel()
 
 class PurposeDrivenAIAgent(AssistantAgent, ABC):
     def __init__(self, purpose, llm, domain_knowledge, interval=5):
