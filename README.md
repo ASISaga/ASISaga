@@ -15,13 +15,13 @@ Agent Smith - The Matrix Reloaded
 
 Software model of an AI Agent based on the above definition of purpose:
 
-Documentation for the `PurposeDrivenAIAgent` class:
+Documentation for the `PurposeDrivenAgent` class:
 
 ---
 
-### Class: `PurposeDrivenAIAgent`
+### Class: `PurposeDrivenAgent`
 
-The `PurposeDrivenAIAgent` class represents an AI agent designed to perpetually work towards a specified purpose using a large language model (LLM). It leverages domain-specific knowledge and dynamically generates actions based on context, occurrence of self, and the environment.
+The `PurposeDrivenAgent` class represents an AI agent designed to perpetually work towards a specified purpose using a large language model (LLM). It leverages domain-specific knowledge and dynamically generates actions based on context, occurrence of self, and the environment.
 
 #### Attributes:
 
