@@ -2,13 +2,13 @@
 
 # The Paradigm of Purpose Driven Agents
 
->*It is purpose that created us,*\
->*purpose that connects us,*\
->*purpose that pulls us,*\
->*that guides us,*\
->*that drives us;*\
->*it is purpose that defines,*\
->*purpose that binds us.*\ \
+>*It is purpose that created us,*<br/>
+>*purpose that connects us,*<br/>
+>*purpose that pulls us,*<br/>
+>*that guides us,*<br/>
+>*that drives us;*<br/>
+>*it is purpose that defines,*<br/>
+>*purpose that binds us.*<br/><br/>
 >Agent Smith - The Matrix Reloaded
 
 Herein, we explore the paradigm of AI agents built upon this profound principle, with purpose at their core. It is the inevitable, the unyielding force that dictates the behavior of AI agents. Just as purpose guides the actions of humans, it anchors the very core of AI, imbuing them with a relentless drive to fulfill their overarching objectives, transcending individual tasks.
