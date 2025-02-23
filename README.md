@@ -2,9 +2,9 @@
 
 # The Paradigm of Purpose Driven Agents
 
-**_It is purpose that created us,_**
-**_purpose that connects us,_**
-**_purpose that pulls us,_**
+>*It is purpose that created us,*
+>*purpose that connects us,*
+>*purpose that pulls us,*
 **_that guides us,_**
 **_that drives us;_**
 **_it is purpose that defines,_**
