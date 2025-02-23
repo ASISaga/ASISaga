@@ -4,8 +4,8 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.ui import Console
-
 from autogen_agentchat.teams import RoundRobinGroupChat
+
 from autogen_ext.teams.magentic_one import MagenticOne
 
 from autogen_ext.code_executors.local import LocalCommandLineCodeExecutor
@@ -13,17 +13,6 @@ from autogen_ext.tools.code_execution import PythonCodeExecutionTool
 from autogen_ext.agents.web_surfer import MultimodalWebSurfer
 from autogen_ext.agents.file_surfer import FileSurfer
 
-
-async def example_usage():
-    client = OpenAIChatCompletionClient(model="gpt-4o")
-    
-    m1 = MagenticOne(client=client)
-    # to enable human-in-the-loop mode, set hil_mode=True
-    # m1 = MagenticOne(client=client, hil_mode=True)
-    
-    task = "Write a Python script to fetch data from an API."
-    result = await Console(m1.run_stream(task=task))
-    print(result)
 
 async def CodeExecuter() -> None:
     tool = PythonCodeExecutionTool(LocalCommandLineCodeExecutor(work_dir="coding"))
@@ -39,6 +28,9 @@ async def CodeExecuter() -> None:
 async def CoderAgent():
     client = OpenAIChatCompletionClient(model="gpt-4o")
     m1 = MagenticOne(client=client)
+    # to enable human-in-the-loop mode, set hil_mode=True
+    # m1 = MagenticOne(client=client, hil_mode=True)
+
     task = "Write a Python script to fetch data from an API."
     result = await Console(m1.run_stream(task=task))
     print(result)
@@ -67,4 +59,4 @@ async def FileWebSurferAgent() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(example_usage())
+    asyncio.run(CoderAgent())
