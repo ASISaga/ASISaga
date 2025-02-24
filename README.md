@@ -1,6 +1,6 @@
-# RealmOfAgents
+# Purpose Driven Agents
 
-# The Paradigm of Purpose Driven Agents
+## The Paradigm
 
 >*It is purpose that created us,*<br/>
 >*purpose that connects us,*<br/>
