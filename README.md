@@ -141,11 +141,11 @@ The `PurposeDrivenAgent` class represents an AI agent designed to perpetually wo
 
 ## Create and activate python virtual environment
 
-python3 -m venv .venv
-source .venv/bin/activate
+!python3 -m venv .venv
+!source .venv/bin/activate
 
 ## To deactivate later:
-deactivate
+!deactivate
 
 ## On Windows
 
@@ -156,25 +156,25 @@ python -m venv .venv
 .venv\Scripts\deactivate
 
 ## Install autogen studio
-pip install -U autogenstudio
+!pip install -U autogenstudio
 
 ## Install autogen chat
-pip install -U "autogen-agentchat"
+!pip install -U "autogen-agentchat"
 
 ## Install autogen OpenAI for Model Client
-pip install "autogen-ext[openai]"
+!pip install "autogen-ext[openai]"
 
 ## Install autogen core
-pip install "autogen-core"
+!pip install "autogen-core"
 
 ## Run AutoGen Studio GUI
-autogenstudio ui --host <host> --port 8000
+!autogenstudio ui --host <host> --port 8000
 
 ## Install Magentic One modules
 
-pip install "autogen-ext[magentic-one]"
+!pip install "autogen-ext[magentic-one]"
 
-pip install "autogen-ext[web-surfer]"
+!pip install "autogen-ext[web-surfer]"
 
-pip install "autogen-ext[file-surfer]"
+!pip install "autogen-ext[file-surfer]"
 
