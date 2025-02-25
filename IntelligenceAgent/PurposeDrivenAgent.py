@@ -1,7 +1,7 @@
 import asyncio
 from abc import ABC, abstractmethod
 from autogen_agentchat.agents import AssistantAgent
-from PurposeDrivenAgent.LargeLanguageModel import LargeLanguageModel
+from LargeLanguageModel import LargeLanguageModel
 
 llm = LargeLanguageModel()
 
