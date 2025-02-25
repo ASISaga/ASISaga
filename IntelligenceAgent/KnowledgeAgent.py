@@ -13,11 +13,12 @@ from autogen_ext.tools.code_execution import PythonCodeExecutionTool
 from autogen_ext.agents.web_surfer import MultimodalWebSurfer
 from autogen_ext.agents.file_surfer import FileSurfer
 
+client = OpenAIChatCompletionClient(model="gpt-4o")
 
 async def CodeExecuter() -> None:
     tool = PythonCodeExecutionTool(LocalCommandLineCodeExecutor(work_dir="coding"))
     agent = AssistantAgent(
-        "assistant", OpenAIChatCompletionClient(model="gpt-4o"), tools=[tool], reflect_on_tool_use=True
+        "assistant", client = client, tools=[tool], reflect_on_tool_use=True
     )
     await Console(
         agent.run_stream(
@@ -26,7 +27,6 @@ async def CodeExecuter() -> None:
     )
 
 async def CoderAgent():
-    client = OpenAIChatCompletionClient(model="gpt-4o")
     m1 = MagenticOne(client=client)
     # to enable human-in-the-loop mode, set hil_mode=True
     # m1 = MagenticOne(client=client, hil_mode=True)
