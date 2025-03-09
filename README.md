@@ -40,3 +40,16 @@ python -m venv .venv
 
 !pip install "autogen-ext[file-surfer]"
 
+## Install Ollama for your operating system
+
+https://ollama.com/download
+
+## Pull and install desired model of DeepSeek R1
+
+!ollama list
+!ollama pull deepseek-r1:1.5b
+!ollama list
+!ollama run deepseek-r1:1.5b
+
+## Install `transformers` library.
+pip install torch transformers

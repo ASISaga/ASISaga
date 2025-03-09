@@ -2,14 +2,15 @@
 # It parses the works of the greatest thinkers in various fields, and builds a domain specific knowledge base.
 # The works are provided as plain text files, pdf files, or web links.
 # The domain specific knowledge base is then used to guide actions of the Domain specefic PurposeDrivenAgents along with the purpose, occurrence of self, and the environment.
-# It uses asyncio to perform asynchronous operations.
+# It uses asynchronous model of autogen.
 
-import asyncio
 from autogen_ext.agents.web_surfer import MultimodalWebSurfer
 from autogen_ext.agents.file_surfer import FileSurfer
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_agentchat.ui import Console
 from autogen_agentchat.teams import RoundRobinGroupChat
+
+model_client = OpenAIChatCompletionClient(model="gpt-4o-2024-08-06")
 
 class LearningAgent:
     def __init__(self, knowledge_base, files, web_links):
@@ -19,16 +20,10 @@ class LearningAgent:
 
     async def KnowledgeBuilderAgent(self) -> None:
         # Define web surfer agent
-        web_surfer_agent = MultimodalWebSurfer(
-            name="MultimodalWebSurfer",
-            model_client=OpenAIChatCompletionClient(model="gpt-4o-2024-08-06"),
-        )
+        web_surfer_agent = MultimodalWebSurfer(name="MultimodalWebSurfer", model_client = model_client,)
 
         # Define file surfer agent
-        file_surfer_agent = FileSurfer(
-            name="FileSurfer",
-            model_client=OpenAIChatCompletionClient(model="gpt-4o-2024-08-06"),
-        )
+        file_surfer_agent = FileSurfer(name="FileSurfer", model_client = model_client,)
 
         # Define a team
         agent_team = RoundRobinGroupChat([web_surfer_agent, file_surfer_agent], max_turns=3)
