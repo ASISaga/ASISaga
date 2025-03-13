@@ -1,0 +1,13 @@
+# submodules used by RealmOfAgents
+
+[submodule "GitHubAgent"]
+	path = GitHubAgent
+	url = https://github.com/ASISaga/GitHubAgent
+
+[submodule "AgentOperatingSystem"]
+	path = AgentOperatingSystem
+	url = https://github.com/ASISaga/AgentOperatingSystem
+
+[submodule "PurposeDrivenAgent"]
+	path = PurposeDrivenAgent
+	url = https://github.com/ASISaga/PurposeDrivenAgent
