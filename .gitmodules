@@ -1,4 +1,5 @@
 # submodules used by RealmOfAgents
+# changes would be pushed to the respective repositories
 
 [submodule "GitHubAgent"]
 	path = GitHubAgent
