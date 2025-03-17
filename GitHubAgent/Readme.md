@@ -1,6 +1,9 @@
 # GitHub Agent
 
-GitHub Agent is a smart assistant that can help you manage and automate various aspects of your projects hosted on GitHub. Here are some tasks a GitHub agent can handle:
+GitHub Agent is a smart assistant that can help you manage and automate various aspects of your projects hosted on GitHub.
+This agent will be used to automatically push agent generated code to github repository 
+
+Here are some tasks a GitHub agent can handle:
 
 1. **Issue Management**: Automatically create, update, and close issues based on certain triggers or events.
 2. **Pull Request Review**: Assist in reviewing pull requests by automatically checking for code standards, running tests, and suggesting changes.
