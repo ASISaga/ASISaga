@@ -12,3 +12,8 @@
 [submodule "PurposeDrivenAgent"]
 	path = PurposeDrivenAgent
 	url = https://github.com/ASISaga/PurposeDrivenAgent
+
+[submodule "asisaga.github.io"]
+	path = asisaga.github.io
+	url = https://github.com/ASISaga/asisaga.github.io
+
