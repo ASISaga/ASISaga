@@ -17,3 +17,7 @@
 	path = asisaga.github.io
 	url = https://github.com/ASISaga/asisaga.github.io
 
+[submodule "AgentTeam"]
+	path = AgentTeam
+	url = https://github.com/ASISaga/AgentTeam
+
