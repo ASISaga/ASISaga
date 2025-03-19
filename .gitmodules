@@ -5,9 +5,9 @@
 	path = GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
 
-[submodule "AgentOperatingSystem"]
-	path = AgentOperatingSystem
-	url = https://github.com/ASISaga/AgentOperatingSystem
+[submodule "BusinessContinuum"]
+	path = BusinessContinuum
+	url = https://github.com/ASISaga/BusinessContinuum
 
 [submodule "PurposeDrivenAgent"]
 	path = PurposeDrivenAgent
@@ -17,7 +17,7 @@
 	path = asisaga.github.io
 	url = https://github.com/ASISaga/asisaga.github.io
 
-[submodule "AgentTeam"]
-	path = AgentTeam
-	url = https://github.com/ASISaga/AgentTeam
+[submodule "AgentOperatingSystem"]
+	path = AgentOperatingSystem
+	url = https://github.com/ASISaga/AgentOperatingSystem
 
