@@ -53,3 +53,6 @@ https://ollama.com/download
 
 ## Install `transformers` library.
 pip install torch transformers
+
+## Install HuggingFace datasets for easily accessing and sharing datasets in fine tuned LLM
+pip install datasets
