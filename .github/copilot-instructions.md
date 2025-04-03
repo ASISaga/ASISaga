@@ -10,3 +10,7 @@ GitHubAgent is a python project.
 It uses https://github.com/PyGithub/PyGithub for iteration with GitHub
 Documentation of PyGithub https://pygithub.readthedocs.io/en/stable/reference.html
 Generate detailed comments.
+Use PascalCase for class names.
+Use CamelCase for class functions.
+Use snake_case for variables.
+Use SCREAMING_SNAKE_CASE for constants.
