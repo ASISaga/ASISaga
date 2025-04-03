@@ -21,3 +21,6 @@
 	path = AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
+[submodule "FineTunedLLM"]
+	path = FineTunedLLM
+	url = https://github.com/ASISaga/FineTunedLLM
