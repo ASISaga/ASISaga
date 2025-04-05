@@ -14,3 +14,5 @@ Use PascalCase for class names.
 Use CamelCase for class methods.
 Use snake_case for variables.
 Use SCREAMING_SNAKE_CASE for constants.
+
+- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `get_azure_best_practices` tool if available.
