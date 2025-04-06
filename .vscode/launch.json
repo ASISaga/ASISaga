@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Run FineTunedLLM",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder:FineTunedLLM}/Client.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder:FineTunedLLM}"
+        }
+    ]
+}
