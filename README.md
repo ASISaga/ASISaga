@@ -57,3 +57,4 @@ pip install torch transformers
 ## Install HuggingFace datasets for easily accessing and sharing datasets in fine tuned LLM
 pip install datasets
 
+pip install azure-storage-blob

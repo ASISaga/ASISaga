@@ -17,4 +17,4 @@ GitHubAgent is a python project.
 It uses https://github.com/PyGithub/PyGithub for iteration with GitHub
 Documentation of PyGithub https://pygithub.readthedocs.io/en/stable/reference.html
 
-- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `get_azure_best_practices` tool if available.
+- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_best_practices` tool if available.
