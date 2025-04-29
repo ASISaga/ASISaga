@@ -5,6 +5,7 @@ asisaga.github.io is a static html website.
 - Use /assets/css/style.scss for centralized styling of website.
 - Define custom classes in style.scss, and use only custom classes, with meaningul names, in html code in all html pages.
 - Leverage Bootstrap's utility classes in style.scss to avoid custom CSS wherever possible.
+- import Bootstrap css at the end of style.scss, don't use bootstrap.scss
 - Define a consistent font family, size, and color scheme in style.scss for use across the website.
 - Ensure all pages are mobile-friendly by using Bootstrap's grid system and responsive utilities, by putting relevant code in classes defined in style.scss.
 - Use Bootstrap spacing utilities (e.g., mb-4, p-3) in style.scss to maintain consistent margins and padding.
