@@ -3,7 +3,8 @@ asisaga.github.io is a static html website.
 - The site would be deployed on github pages, so local instalation of Jekyll is not required.
 - Use /assets/js folder for JavaScript code.
 - Use /assets/css/style.scss for centralized styling of website.
-- Define custom classes in style.scss, and use only custom classes, with meaningul names, in html code in all html pages.
+- Markdown code is required at the begining of style.scss for Jekyll. Don't delete it.
+- Define custom classes in style.scss, and use only one custom class, with meaningul name, in any html element. Enacapsulate all bootstrap code inside the custom class.
 - Leverage Bootstrap's utility classes in style.scss to avoid custom CSS wherever possible.
 - import Bootstrap css at the end of style.scss, don't use bootstrap.scss
 - Define a consistent font family, size, and color scheme in style.scss for use across the website.
