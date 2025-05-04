@@ -5,8 +5,9 @@ asisaga.github.io is a static html website.
 - Use /assets/css/style.scss for centralized styling of website.
 - Markdown code is required at the begining of style.scss for Jekyll. Don't delete it.
 - Define custom classes in style.scss, and use only one custom class, with meaningul name, in any html element. Enacapsulate all bootstrap code inside the custom class.
-- Leverage Bootstrap's utility classes in style.scss to avoid custom CSS wherever possible.
-- Add necessary bootstrap.scss dependencies to relevant files in assets/css/bootstrap folder
+- Leverage Bootstrap's classes as much as possible inside style.scss, to avoid custom CSS wherever possible.
+- bootstrap version used is 5.3.5
+- bootstrap.scss dependencies are in assets/css/bootstrap folder
 - Define a consistent font family, size, and color scheme in style.scss for use across the website.
 - Ensure all pages are mobile-friendly by using Bootstrap's grid system and responsive utilities, by putting relevant code in classes defined in style.scss.
 - Use Bootstrap spacing utilities (e.g., mb-4, p-3) in style.scss to maintain consistent margins and padding.
