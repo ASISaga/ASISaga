@@ -1,5 +1,6 @@
 ### Static html website coding preferences
 asisaga.github.io is a static Jekyll website on GitHub Pages.
+The structure of the website is documented in website_structure.json. Keep this file updated for any structural changes made in the website.
 
 #### Jekyll Structure & Components
 - Use Jekyll with Liquid templating (no themes required)
