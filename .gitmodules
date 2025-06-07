@@ -24,3 +24,7 @@
 [submodule "FineTunedLLM"]
 	path = FineTunedLLM
 	url = https://github.com/ASISaga/FineTunedLLM
+
+[submodule "RealmOfAgents"]
+	path = RealmOfAgents
+	url = https://github.com/ASISaga/RealmOfAgents
