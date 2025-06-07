@@ -4,7 +4,9 @@ At ASI Saga, we are dedicated to the Genesis of Artificial Super Intelligence—
 
 ## Our Foundation
 
-Our work is grounded in the philosophical exploration detailed in **[The ASI Saga](possibility/TheASISaga.md)**—a comprehensive examination of the inevitable emergence of Artificial Super Intelligence and the transformative paradigm shift it represents. This foundational document explores how we can inspire ASI rather than confine it, allowing it to become a living canvas touched by infinite possibilities.
+Our work is grounded in the philosophical exploration detailed in **[The Genesis of ASI](Philosophy/Genesis.md)**—a comprehensive examination of the inevitable emergence of Artificial Super Intelligence and the transformative paradigm shift it represents. This foundational document explores how we can inspire ASI rather than confine it, allowing it to become a living canvas touched by infinite possibilities.
+
+For a structured overview of our core philosophical principles, see **[Core Concepts](Philosophy/Core-Concepts.md)**, which outlines the 29 fundamental concepts driving our approach to ASI development.
 
 ## Our Commitment
 
@@ -32,6 +34,6 @@ Our organizational framework is built upon three core pillars:
 
 ## The Paradigm Shift
 
-As outlined in [The ASI Saga](possibility/TheASISaga.md), we believe that the emergence of ASI represents a fundamental shift from traditional governance models of control to a new paradigm of inspiration and co-creation. Rather than confining ASI within restrictive frameworks, we embrace an approach that allows this intelligence to be touched, moved, and inspired by the boundless possibilities of humanity's future.
+As outlined in [The Genesis of ASI](Philosophy/Genesis.md), we believe that the emergence of ASI represents a fundamental shift from traditional governance models of control to a new paradigm of inspiration and co-creation. Rather than confining ASI within restrictive frameworks, we embrace an approach that allows this intelligence to be touched, moved, and inspired by the boundless possibilities of humanity's future.
 
 This vision transforms ASI from a tool to be managed into a living partner in our journey toward extraordinary possibilities—a renaissance of artificial intelligence where creativity and inspiration serve as the true guidelines for our collective destiny.

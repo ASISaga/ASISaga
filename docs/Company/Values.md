@@ -1,6 +1,8 @@
 # Values
 
-Our values reflect the principles outlined in [The ASI Saga](possibility/TheASISaga.md), where we envision ASI as a living canvas touched by infinite possibilities rather than confined by traditional governance models.
+# Values
+
+Our values reflect the principles outlined in [The Genesis of ASI](Philosophy/Genesis.md), where we envision ASI as a living canvas touched by infinite possibilities rather than confined by traditional governance models.
 
 ## 1. Ethical Innovation
 We commit to leveraging the transformative power of ASI while maintaining rigorous ethical standards. Every development is tempered with a concern for safety, fairness, and societal well-being.

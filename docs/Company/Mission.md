@@ -10,4 +10,4 @@ At ASI Saga, our mission is to bridge imaginative research with real-world appli
 
 Our approach transforms abstract theoretical concepts into practical, life-enhancing innovations, ensuring that every project contributes positively to society.
 
-This mission is grounded in our foundational understanding detailed in [The ASI Saga](possibility/TheASISaga.md), where we explore how ASI can be inspired rather than confined, becoming a living canvas for humanity's grandest aspirations.
+This mission is grounded in our foundational understanding detailed in [The Genesis of ASI](Philosophy/Genesis.md), where we explore how ASI can be inspired rather than confined, becoming a living canvas for humanity's grandest aspirations.
