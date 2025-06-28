@@ -1,25 +1,30 @@
 # submodules used by RealmOfAgents
 # changes would be pushed to the respective repositories
 
+[submodule "businessinfinity.asisaga.com"]
+	path = Website/businessinfinity.asisaga.com
+	url = https://github.com/ASISaga/businessinfinity.asisaga.com
+
+[submodule "www.asisaga.com"]
+	path = Website/www.asisaga.com
+	url = https://github.com/ASISaga/www.asisaga.com
+
+[submodule "common.asisaga.com"]
+	path = Website/common.asisaga.com
+	url = https://github.com/ASISaga/common.asisaga.com
+
 [submodule "GitHubAgent"]
 	path = GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
 
-[submodule "businessinfinity-web"]
-	path = BusinessInfinity/businessinfinity-web
-	url = https://github.com/ASISaga/businessinfinity-web
-
-[submodule "businessinfinity-server"]
-	path = BusinessInfinity/businessinfinity-server
-	url = https://github.com/ASISaga/businessinfinity-server
+[submodule "BusinessInfinity"]
+	path = BusinessInfinity
+	url = https://github.com/ASISaga/BusinessInfinity
 
 [submodule "PurposeDrivenAgent"]
 	path = PurposeDrivenAgent
 	url = https://github.com/ASISaga/PurposeDrivenAgent
 
-[submodule "asisaga.github.io"]
-	path = asisaga.github.io
-	url = https://github.com/ASISaga/asisaga.github.io
 
 [submodule "AgentOperatingSystem"]
 	path = AgentOperatingSystem
