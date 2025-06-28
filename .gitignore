@@ -4,3 +4,4 @@ ASISaga.code-workspace
 
 # Ignore Python bytecode cache directories
 __pycache__/
+*.pyc

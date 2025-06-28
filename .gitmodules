@@ -5,9 +5,13 @@
 	path = GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
 
-[submodule "BusinessInfinity"]
-	path = BusinessInfinity
-	url = https://github.com/ASISaga/BusinessInfinity
+[submodule "businessinfinity-web"]
+	path = BusinessInfinity/businessinfinity-web
+	url = https://github.com/ASISaga/businessinfinity-web
+
+[submodule "businessinfinity-server"]
+	path = BusinessInfinity/businessinfinity-server
+	url = https://github.com/ASISaga/businessinfinity-server
 
 [submodule "PurposeDrivenAgent"]
 	path = PurposeDrivenAgent
