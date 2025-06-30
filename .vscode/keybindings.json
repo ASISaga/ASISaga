@@ -1,0 +1,12 @@
+[
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Sync and push nav.yml for www.asisaga.com"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Sync and push nav.yml for businessinfinity.asisaga.com"
+  }
+]

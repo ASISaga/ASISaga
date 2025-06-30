@@ -1,0 +1,67 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		// --- www.asisaga.com tasks ---
+		{
+			"type": "shell",
+			"label": "Copy nav.yml from theme to www.asisaga.com _data",
+			"command": "cp Website/common.asisaga.com/_data/nav.yml Website/www.asisaga.com/_data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git add nav.yml in www.asisaga.com",
+			"command": "cd Website/www.asisaga.com && git add _data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git commit nav.yml in www.asisaga.com",
+			"command": "cd Website/www.asisaga.com && git commit -m 'Update nav.yml from theme' _data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git push www.asisaga.com",
+			"command": "cd Website/www.asisaga.com && git push"
+		},
+		{
+			"label": "Sync and push nav.yml for www.asisaga.com",
+			"dependsOn": [
+				"Copy nav.yml from theme to www.asisaga.com _data",
+				"Git add nav.yml in www.asisaga.com",
+				"Git commit nav.yml in www.asisaga.com",
+				"Git push www.asisaga.com"
+			],
+			"dependsOrder": "sequence"
+		},
+		// --- businessinfinity.asisaga.com tasks ---
+		{
+			"type": "shell",
+			"label": "Copy nav.yml from theme to businessinfinity.asisaga.com _data",
+			"command": "cp Website/common.asisaga.com/_data/nav.yml Website/businessinfinity.asisaga.com/_data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git add nav.yml in businessinfinity.asisaga.com",
+			"command": "cd Website/businessinfinity.asisaga.com && git add _data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git commit nav.yml in businessinfinity.asisaga.com",
+			"command": "cd Website/businessinfinity.asisaga.com && git commit -m 'Update nav.yml from theme' _data/nav.yml"
+		},
+		{
+			"type": "shell",
+			"label": "Git push businessinfinity.asisaga.com",
+			"command": "cd Website/businessinfinity.asisaga.com && git push"
+		},
+		{
+			"label": "Sync and push nav.yml for businessinfinity.asisaga.com",
+			"dependsOn": [
+				"Copy nav.yml from theme to businessinfinity.asisaga.com _data",
+				"Git add nav.yml in businessinfinity.asisaga.com",
+				"Git commit nav.yml in businessinfinity.asisaga.com",
+				"Git push businessinfinity.asisaga.com"
+			],
+			"dependsOrder": "sequence"
+		}
+	]
+}
