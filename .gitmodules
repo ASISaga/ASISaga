@@ -9,10 +9,6 @@
 	path = Website/www.asisaga.com
 	url = https://github.com/ASISaga/www.asisaga.com
 
-[submodule "common.asisaga.com"]
-	path = Website/common.asisaga.com
-	url = https://github.com/ASISaga/common.asisaga.com
-
 [submodule "GitHubAgent"]
 	path = GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
