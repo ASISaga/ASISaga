@@ -9,26 +9,32 @@
 		},
 		{
 			"type": "shell",
-			"label": "Git add nav.yml in www.asisaga.com",
-			"command": "cd Website/www.asisaga.com && git add _data/nav.yml"
+			"label": "Copy _layouts/default.html from theme to www.asisaga.com _layouts",
+			"command": "cp Website/common.asisaga.com/_layouts/default.html Website/www.asisaga.com/_layouts/default.html"
 		},
 		{
 			"type": "shell",
-			"label": "Git commit nav.yml in www.asisaga.com",
-			"command": "cd Website/www.asisaga.com && git commit -m 'Update nav.yml from theme' _data/nav.yml"
+			"label": "Git add nav.yml and default.html in www.asisaga.com",
+			"command": "cd Website/www.asisaga.com && git add _data/nav.yml _layouts/default.html"
 		},
 		{
 			"type": "shell",
-			"label": "Git push www.asisaga.com",
+			"label": "Git commit nav.yml and default.html in www.asisaga.com",
+			"command": "cd Website/www.asisaga.com && git commit -m 'Update nav.yml and default.html from theme' _data/nav.yml _layouts/default.html"
+		},
+		{
+			"type": "shell",
+			"label": "Git push www.asisaga.com (nav.yml and default.html)",
 			"command": "cd Website/www.asisaga.com && git push"
 		},
 		{
-			"label": "Sync and push nav.yml for www.asisaga.com",
+			"label": "Sync and push nav.yml and default.html for www.asisaga.com",
 			"dependsOn": [
 				"Copy nav.yml from theme to www.asisaga.com _data",
-				"Git add nav.yml in www.asisaga.com",
-				"Git commit nav.yml in www.asisaga.com",
-				"Git push www.asisaga.com"
+				"Copy _layouts/default.html from theme to www.asisaga.com _layouts",
+				"Git add nav.yml and default.html in www.asisaga.com",
+				"Git commit nav.yml and default.html in www.asisaga.com",
+				"Git push www.asisaga.com (nav.yml and default.html)"
 			],
 			"dependsOrder": "sequence"
 		},
@@ -40,26 +46,32 @@
 		},
 		{
 			"type": "shell",
-			"label": "Git add nav.yml in businessinfinity.asisaga.com",
-			"command": "cd Website/businessinfinity.asisaga.com && git add _data/nav.yml"
+			"label": "Copy _layouts/default.html from theme to businessinfinity.asisaga.com _layouts",
+			"command": "cp Website/common.asisaga.com/_layouts/default.html Website/businessinfinity.asisaga.com/_layouts/default.html"
 		},
 		{
 			"type": "shell",
-			"label": "Git commit nav.yml in businessinfinity.asisaga.com",
-			"command": "cd Website/businessinfinity.asisaga.com && git commit -m 'Update nav.yml from theme' _data/nav.yml"
+			"label": "Git add nav.yml and default.html in businessinfinity.asisaga.com",
+			"command": "cd Website/businessinfinity.asisaga.com && git add _data/nav.yml _layouts/default.html"
 		},
 		{
 			"type": "shell",
-			"label": "Git push businessinfinity.asisaga.com",
+			"label": "Git commit nav.yml and default.html in businessinfinity.asisaga.com",
+			"command": "cd Website/businessinfinity.asisaga.com && git commit -m 'Update nav.yml and default.html from theme' _data/nav.yml _layouts/default.html"
+		},
+		{
+			"type": "shell",
+			"label": "Git push businessinfinity.asisaga.com (nav.yml and default.html)",
 			"command": "cd Website/businessinfinity.asisaga.com && git push"
 		},
 		{
-			"label": "Sync and push nav.yml for businessinfinity.asisaga.com",
+			"label": "Sync and push nav.yml and default.html for businessinfinity.asisaga.com",
 			"dependsOn": [
 				"Copy nav.yml from theme to businessinfinity.asisaga.com _data",
-				"Git add nav.yml in businessinfinity.asisaga.com",
-				"Git commit nav.yml in businessinfinity.asisaga.com",
-				"Git push businessinfinity.asisaga.com"
+				"Copy _layouts/default.html from theme to businessinfinity.asisaga.com _layouts",
+				"Git add nav.yml and default.html in businessinfinity.asisaga.com",
+				"Git commit nav.yml and default.html in businessinfinity.asisaga.com",
+				"Git push businessinfinity.asisaga.com (nav.yml and default.html)"
 			],
 			"dependsOrder": "sequence"
 		}
