@@ -14,7 +14,7 @@
 	url = https://github.com/ASISaga/www.asisaga.com
 
 [submodule "GitHubAgent"]
-	path = GitHubAgent
+	path = RealmOfAgents/GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
 
 [submodule "BusinessInfinity"]
@@ -22,16 +22,16 @@
 	url = https://github.com/ASISaga/BusinessInfinity
 
 [submodule "PurposeDrivenAgent"]
-	path = PurposeDrivenAgent
+	path = RealmOfAgents/PurposeDrivenAgent
 	url = https://github.com/ASISaga/PurposeDrivenAgent
 
 
 [submodule "AgentOperatingSystem"]
-	path = AgentOperatingSystem
+	path = RealmOfAgents/AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
 [submodule "FineTunedLLM"]
-	path = FineTunedLLM
+	path = RealmOfAgents/FineTunedLLM
 	url = https://github.com/ASISaga/FineTunedLLM
 
 [submodule "Oracle"]
