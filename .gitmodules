@@ -34,12 +34,10 @@
 	path = FineTunedLLM
 	url = https://github.com/ASISaga/FineTunedLLM
 
-[submodule "RealmOfAgents"]
-	path = RealmOfAgents
-	url = https://github.com/ASISaga/RealmOfAgents
 [submodule "Oracle"]
 	path = Oracle
 	url = https://github.com/ASISaga/Oracle.git
+
 [submodule "Website/realmofagents.asisaga.com"]
 	path = Website/realmofagents.asisaga.com
 	url = https://github.com/ASISaga/realmofagents.asisaga.com
