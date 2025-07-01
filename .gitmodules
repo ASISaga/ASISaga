@@ -1,43 +1,49 @@
-# submodules used by RealmOfAgents
+# submodules used by ASI Saga
 # changes would be pushed to the respective repositories
 
+# Website submodules
 [submodule "common.asisaga.com"]
 	path = Website/common.asisaga.com
 	url = https://github.com/ASISaga/common.asisaga.com
-
-[submodule "businessinfinity.asisaga.com"]
-	path = Website/businessinfinity.asisaga.com
-	url = https://github.com/ASISaga/businessinfinity.asisaga.com
 
 [submodule "www.asisaga.com"]
 	path = Website/www.asisaga.com
 	url = https://github.com/ASISaga/www.asisaga.com
 
-[submodule "GitHubAgent"]
-	path = RealmOfAgents/GitHubAgent
-	url = https://github.com/ASISaga/GitHubAgent
+[submodule "Website/realmofagents.asisaga.com"]
+	path = Website/realmofagents.asisaga.com
+	url = https://github.com/ASISaga/realmofagents.asisaga.com
 
-[submodule "BusinessInfinity"]
-	path = BusinessInfinity
-	url = https://github.com/ASISaga/BusinessInfinity
+[submodule "businessinfinity.asisaga.com"]
+	path = Website/businessinfinity.asisaga.com
+	url = https://github.com/ASISaga/businessinfinity.asisaga.com
+
+
+# Realm of Agents submodules
+[submodule "FineTunedLLM"]
+	path = RealmOfAgents/FineTunedLLM
+	url = https://github.com/ASISaga/FineTunedLLM
 
 [submodule "PurposeDrivenAgent"]
 	path = RealmOfAgents/PurposeDrivenAgent
 	url = https://github.com/ASISaga/PurposeDrivenAgent
 
+[submodule "GitHubAgent"]
+	path = RealmOfAgents/GitHubAgent
+	url = https://github.com/ASISaga/GitHubAgent
 
 [submodule "AgentOperatingSystem"]
 	path = RealmOfAgents/AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
-[submodule "FineTunedLLM"]
-	path = RealmOfAgents/FineTunedLLM
-	url = https://github.com/ASISaga/FineTunedLLM
 
+# Business Infinity submodules
+[submodule "BusinessInfinity"]
+	path = BusinessInfinity
+	url = https://github.com/ASISaga/BusinessInfinity
+
+
+# Oracle submodules
 [submodule "Oracle"]
 	path = Oracle
 	url = https://github.com/ASISaga/Oracle.git
-
-[submodule "Website/realmofagents.asisaga.com"]
-	path = Website/realmofagents.asisaga.com
-	url = https://github.com/ASISaga/realmofagents.asisaga.com
