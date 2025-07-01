@@ -37,3 +37,6 @@
 [submodule "RealmOfAgents"]
 	path = RealmOfAgents
 	url = https://github.com/ASISaga/RealmOfAgents
+[submodule "Oracle"]
+	path = Oracle
+	url = https://github.com/ASISaga/Oracle.git
