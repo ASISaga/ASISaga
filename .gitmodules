@@ -43,7 +43,7 @@
 	url = https://github.com/ASISaga/BusinessInfinity
 
 
-# Oracle submodules
+# Oracle document store submodules
 [submodule "Oracle"]
 	path = Oracle
 	url = https://github.com/ASISaga/Oracle.git
