@@ -1,6 +1,10 @@
 # submodules used by RealmOfAgents
 # changes would be pushed to the respective repositories
 
+[submodule "common.asisaga.com"]
+	path = common.asisaga.com
+	url = https://github.com/ASISaga/common.asisaga.com
+
 [submodule "businessinfinity.asisaga.com"]
 	path = Website/businessinfinity.asisaga.com
 	url = https://github.com/ASISaga/businessinfinity.asisaga.com
