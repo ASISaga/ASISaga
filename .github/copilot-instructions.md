@@ -9,6 +9,7 @@ asisaga.com is a static Jekyll website on GitHub Pages, located in the `Website`
 - The Jekyll theme is located in the `common.asisaga.com` submodule. This theme is applied to all subdomains by GitHub Pages at compile time.
 - The structure of the website is documented in `website_structure.json`. Keep this file updated for any structural changes made in the website.
 
+
 #### Jekyll Structure & Components
 - Use Jekyll with Liquid templating (no themes required)
 - Create reusable UI components in `_includes` folder
@@ -22,12 +23,20 @@ asisaga.com is a static Jekyll website on GitHub Pages, located in the `Website`
 - Each HTML page must have a matching SCSS file in `/assets/css/pages/` directory
 - Each HTML element in a Jekyll UI component or HTML page must have exactly one SCSS class in its respective SCSS file
 - **Subdomain site JavaScript loading:** Each subdomain site (`www`, `realmofagents`, `businessinfinity`) includes a `script.js` in its `<head>`, which imports `common.js` from the theme site (`common.asisaga.com/assets/js`). All shared JS (including Bootstrap logic) must be imported via `common.js` for consistency and maintainability across subdomains.
+- **Theme merging:** The `_layouts`, `_includes`, `_sass`, and `assets` directories from the `common.asisaga.com` theme are automatically merged into each subdomain site during the Jekyll site build by GitHub Pages. Do not manually copy these folders into subdomains; update or add components, layouts, styles, or assets in the theme and all subdomains will inherit them on the next build.
+
 
 #### SCSS Structure & Components
 - Bootstrap v5.3.5 with dependencies in `assets/css/bootstrap`
 - Naming: Use kebab-case for single, descriptive custom classes per element
 - Central styling: `/assets/css/style.scss` (imports only, no direct code)
 - Preserve required Jekyll Markdown header in style.scss
+**Theme SCSS organization:**
+  - Common SCSS for the theme is kept in the theme's `_sass` directory, with `_common.scss` as the entry point for shared styles.
+  - Each subdomain maintains its own SCSS in its respective `_sass` directory, with `_main.scss` as the entry point for subdomain-specific styles.
+  - The theme provides a `style.scss` file in `assets/css`, which is included in the HTML `<head>`.
+  - `style.scss` imports `_common.scss` from the theme and `_main.scss` from the respective subdomain, ensuring both shared and subdomain-specific styles are applied.
+  - **All SCSS updates must be made in the appropriate `_sass` directory for the theme or subdomain. Do not edit or add SCSS directly in `assets/css` except for the `style.scss` import file.**
 
 ##### Organization & Hierarchy
 - Name partials with underscore prefix: `_partial-name.scss`
