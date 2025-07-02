@@ -1,6 +1,13 @@
 ### Static html website coding preferences
-asisaga.github.io is a static Jekyll website on GitHub Pages.
-The structure of the website is documented in website_structure.json. Keep this file updated for any structural changes made in the website.
+asisaga.com is a static Jekyll website on GitHub Pages, located in the `Website` folder of this workspace.
+
+#### Website Structure
+- asisaga.com has three subdomains: `www`, `realmofagents`, and `businessinfinity`. Each subdomain is implemented as its own submodule within the `Website` folder:
+  - `www.asisaga.com`
+  - `realmofagents.asisaga.com`
+  - `businessinfinity.asisaga.com`
+- The Jekyll theme is located in the `common.asisaga.com` submodule. This theme is applied to all subdomains by GitHub Pages at compile time.
+- The structure of the website is documented in `website_structure.json`. Keep this file updated for any structural changes made in the website.
 
 #### Jekyll Structure & Components
 - Use Jekyll with Liquid templating (no themes required)

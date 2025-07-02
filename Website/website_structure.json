@@ -1,0 +1,912 @@
+{
+  "name": "Website",
+  "type": "directory",
+  "description": "Monorepo for all ASISaga static sites and themes (Jekyll)",
+  "children": [
+    {
+      "name": "common.asisaga.com",
+      "type": "directory",
+      "description": "Jekyll theme for all asisaga.com sites and subdomains. Contains _includes, _layouts, _sass, assets, and shared data.",
+      "children": []
+    },
+    {
+      "name": "www.asisaga.com",
+      "type": "directory",
+      "description": "Main website for asisaga.com. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": []
+    },
+    {
+      "name": "businessinfinity.asisaga.com",
+      "type": "directory",
+      "description": "Business Infinity subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": []
+    },
+    {
+      "name": "realmofagents.asisaga.com",
+      "type": "directory",
+      "description": "Realm of Agents subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": []
+    },
+    {
+      "name": "assets",
+      "type": "directory",
+      "description": "Static assets including CSS, images, and JavaScript",
+      "children": []
+    },
+    {
+      "name": "about",
+      "type": "directory",
+      "description": "About page",
+      "children": []
+    },
+    {
+      "name": "business-infinity",
+      "type": "directory",
+      "description": "Business Infinity product pages",
+      "children": []
+    },
+    {
+      "name": "realm-of-agents",
+      "type": "directory",
+      "description": "Realm of Agents product pages",
+      "children": []
+    },
+    {
+      "name": "sitemap",
+      "type": "directory",
+      "description": "Site navigation pages",
+      "children": []
+    },
+    {
+      "name": "website_structure.json",
+      "type": "file",
+      "description": "Website structure representation for documentation"
+    }
+  ]
+          "name": "about.yml",
+          "type": "file",
+          "description": "About page content data"
+        },
+        {
+          "name": "business_infinity.yml",
+          "type": "file",
+          "description": "Business Infinity product data"
+        },
+        {
+          "name": "business_infinity_entrepreneur.yml",
+          "type": "file",
+          "description": "Business Infinity Entrepreneur page data"
+        },
+        {
+          "name": "contact.yml",
+          "type": "file",
+          "description": "Contact page content data"
+        },
+        {
+          "name": "github_agent.yml",
+          "type": "file",
+          "description": "GitHub Agent product data"
+        },
+        {
+          "name": "legacy.yml",
+          "type": "file",
+          "description": "Legacy page content data"
+        },
+        {
+          "name": "nav.yml",
+          "type": "file",
+          "description": "Navigation structure data"
+        },
+        {
+          "name": "possibilities.yml",
+          "type": "file",
+          "description": "Possibilities page content data"
+        },
+        {
+          "name": "products.yml",
+          "type": "file",
+          "description": "Product information data"
+        },        
+        {
+          "name": "purpose_driven_agent.yml",
+          "type": "file",
+          "description": "Purpose Driven Agent product data"
+        },
+        {
+          "name": "resources.yml",
+          "type": "file",
+          "description": "Resources page content data"
+        },
+        {
+          "name": "saga.yml",
+          "type": "file",
+          "description": "Saga page content data"
+        },
+        {
+          "name": "team.yml",
+          "type": "file",
+          "description": "Team member information for the About page that appears in the team section"
+        },
+        {
+          "name": "thoughtlab.yml",
+          "type": "file",
+          "description": "Thought Lab page content data"
+        }
+      ]
+    },
+    {
+      "name": "_includes",
+      "type": "directory",
+      "description": "Reusable UI components",
+      "children": [
+        {
+          "name": "content-modal.html",
+          "type": "file", 
+          "description": "Modal dialog component for interactive content",
+          "children": []
+        },
+        {
+          "name": "interactive-module.html",
+          "type": "file",
+          "description": "Interactive module component with hover effects and clickable content",
+          "children": []
+        },
+        {
+          "name": "timeline.html",
+          "type": "file",
+          "description": "Interactive timeline component with clickable markers and content panels",
+          "children": []
+        },
+        {
+          "name": "cta.html",
+          "type": "file",
+          "description": "Call-to-action component",
+          "children": []
+        },
+        {
+          "name": "feature-grid.html",
+          "type": "file",
+          "description": "Feature grid component",
+          "children": []
+        },
+        {
+          "name": "footer.html",
+          "type": "file",
+          "description": "Footer component",
+          "children": []
+        },
+        {
+          "name": "head.html",
+          "type": "file",
+          "description": "Head section component",
+          "children": []
+        },
+        {
+          "name": "header.html",
+          "type": "file",
+          "description": "Header component",
+          "children": []
+        },
+        {
+          "name": "product-applications.html",
+          "type": "file",
+          "description": "Product applications/use cases component",
+          "children": []
+        },
+        {
+          "name": "product-benefits-list.html",
+          "type": "file",
+          "description": "Product benefits list component",
+          "children": []
+        },
+        {
+          "name": "product-code-example.html",
+          "type": "file",
+          "description": "Product code example component",
+          "children": []
+        },
+        {
+          "name": "product-feature-grid.html",
+          "type": "file",
+          "description": "Product feature grid component",
+          "children": []
+        },
+        {
+          "name": "product-section-container.html",
+          "type": "file",
+          "description": "Product section container component",
+          "children": []
+        },
+        {
+          "name": "product-visual.html",
+          "type": "file",
+          "description": "Product visual/diagram component",
+          "children": []
+        },
+        {
+          "name": "hero.html",
+          "type": "file",
+          "description": "Hero section component",
+          "children": []
+        },        {
+          "name": "linkedin.html",
+          "type": "file",
+          "description": "LinkedIn integration component",
+          "children": []
+        },
+        {
+          "name": "navbar.html",
+          "type": "file",
+          "description": "Navigation bar component",
+          "children": []
+        },
+        {
+          "name": "product-card.html",
+          "type": "file",
+          "description": "Product card component",
+          "children": []
+        },
+        {
+          "name": "section-header.html",
+          "type": "file",
+          "description": "Section header component",
+          "children": []
+        },
+        {
+          "name": "testimonial.html",
+          "type": "file",
+          "description": "Testimonial component",
+          "children": []
+        }
+      ]
+    },    {
+      "name": "_layouts",
+      "type": "directory",
+      "description": "Layout templates for Jekyll",
+      "children": [
+        {
+          "name": "default.html",
+          "type": "file",
+          "description": "Default layout template"
+        },
+        {
+          "name": "product.html",
+          "type": "file",
+          "description": "Product page layout template"
+        }
+      ]
+    },
+{
+  "name": "Website",
+  "type": "directory",
+  "description": "Monorepo for all ASISaga static sites and themes (Jekyll)",
+  "children": [
+    {
+      "name": "website_structure.json",
+      "type": "file",
+      "description": "Website structure representation for documentation"
+    },
+    {
+      "name": "common.asisaga.com",
+      "type": "directory",
+      "description": "Shared Jekyll theme and includes for all ASISaga sites.",
+      "children": [
+        { "name": "_data", "type": "directory", "children": [
+          { "name": "nav.yml", "type": "file" }
+        ]},
+        { "name": "_includes", "type": "directory", "children": [
+          { "name": "content-modal.html", "type": "file" },
+          { "name": "cta.html", "type": "file" },
+          { "name": "feature-grid.html", "type": "file" },
+          { "name": "footer.html", "type": "file" },
+          { "name": "head.html", "type": "file" },
+          { "name": "header.html", "type": "file" },
+          { "name": "hero.html", "type": "file" },
+          { "name": "interactive-module.html", "type": "file" },
+          { "name": "linkedin.html", "type": "file" },
+          { "name": "navbar.html", "type": "file" },
+          { "name": "product-applications.html", "type": "file" },
+          { "name": "product-benefits-list.html", "type": "file" },
+          { "name": "product-card.html", "type": "file" },
+          { "name": "product-code-example.html", "type": "file" },
+          { "name": "product-feature-grid.html", "type": "file" },
+          { "name": "product-section-container.html", "type": "file" },
+          { "name": "product-visual.html", "type": "file" },
+          { "name": "section-header.html", "type": "file" },
+          { "name": "testimonial.html", "type": "file" },
+          { "name": "timeline.html", "type": "file" }
+        ]},
+        { "name": "_layouts", "type": "directory", "children": [
+          { "name": "default.html", "type": "file" },
+          { "name": "product.html", "type": "file" }
+        ]},
+        { "name": "_sass", "type": "directory" },
+        { "name": "assets", "type": "directory" },
+        { "name": "LICENSE", "type": "file" },
+        { "name": "README.md", "type": "file" }
+      ]
+    },
+    {
+      "name": "www.asisaga.com",
+      "type": "directory",
+      "description": "Main website for asisaga.com. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": [
+        { "name": "_config.yml", "type": "file" },
+        { "name": "CNAME", "type": "file" },
+        { "name": "index.html", "type": "file" },
+        { "name": "_data", "type": "directory", "children": [
+          { "name": "about.yml", "type": "file" },
+          { "name": "business_infinity.yml", "type": "file" },
+          { "name": "business_infinity_entrepreneur.yml", "type": "file" },
+          { "name": "contact.yml", "type": "file" },
+          { "name": "github_agent.yml", "type": "file" },
+          { "name": "legacy.yml", "type": "file" },
+          { "name": "nav.yml", "type": "file" },
+          { "name": "possibilities.yml", "type": "file" },
+          { "name": "products.yml", "type": "file" },
+          { "name": "purpose_driven_agent.yml", "type": "file" },
+          { "name": "resources.yml", "type": "file" },
+          { "name": "saga.yml", "type": "file" },
+          { "name": "team.yml", "type": "file" },
+          { "name": "thoughtlab.yml", "type": "file" }
+        ]},
+        { "name": "_includes", "type": "directory" },
+        { "name": "_layouts", "type": "directory" },
+        { "name": "_sass", "type": "directory" },
+        { "name": "assets", "type": "directory" },
+        { "name": "about", "type": "directory" },
+        { "name": "contact", "type": "directory" },
+        { "name": "business-infinity", "type": "directory" },
+        { "name": "realm-of-agents", "type": "directory" }
+      ]
+    },
+    {
+      "name": "businessinfinity.asisaga.com",
+      "type": "directory",
+      "description": "Business Infinity subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": [
+        { "name": "_config.yml", "type": "file" },
+        { "name": "CNAME", "type": "file" },
+        { "name": "index.html", "type": "file" },
+        { "name": "LICENSE", "type": "file" },
+        { "name": "README.md", "type": "file" },
+        { "name": "website_structure.json", "type": "file" },
+        { "name": "_data", "type": "directory", "children": [
+          { "name": "nav.yml", "type": "file" }
+        ]},
+        { "name": "_includes", "type": "directory" },
+        { "name": "_sass", "type": "directory" },
+        { "name": "assets", "type": "directory" },
+        { "name": "templates", "type": "directory" }
+      ]
+    },
+    {
+      "name": "realmofagents.asisaga.com",
+      "type": "directory",
+      "description": "Realm of Agents subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "children": [
+        { "name": "_config.yml", "type": "file" },
+        { "name": "CNAME", "type": "file" },
+        { "name": "index.html", "type": "file" },
+        { "name": "LICENSE", "type": "file" },
+        { "name": "Readme.md", "type": "file" },
+        { "name": "_data", "type": "directory" },
+        { "name": "_sass", "type": "directory" }
+      ]
+    }
+  ]
+}
+}
+    {
+      "name": "assets",
+      "type": "directory",
+      "description": "Static assets including CSS, images, and JavaScript",
+      "children": [
+        {
+          "name": "css",
+          "type": "directory",
+          "description": "SCSS styles organized by type",
+          "children": [
+            {
+              "name": "style.scss",
+              "type": "file",
+              "description": "Main SCSS file that imports all partials"
+            },
+            {
+              "name": "_base",
+              "type": "directory",
+              "description": "Core styling elements",
+              "children": [
+                {
+                  "name": "_base-section.scss",
+                  "type": "file",
+                  "description": "Base styles for generic section elements"                },                {
+                  "name": "_animations.scss",
+                  "type": "file",
+                  "description": "Animation and effects for the website including keyframes and transition effects"
+                },
+                {
+                  "name": "_accessibility.scss",
+                  "type": "file",
+                  "description": "Accessibility-specific styles for better usability and compliance with WCAG guidelines"
+                },                {
+                  "name": "_colors.scss",
+                  "type": "file",
+                  "description": "Centralized color variables and definitions for all components and pages, including header, footer, and navbar specific colors"
+                },
+                {
+                  "name": "_dimensions.scss",
+                  "type": "file",
+                  "description": "Centralized dimension variables including spacing, sizes, borders, and breakpoints for consistent styling"
+                },
+                {
+                  "name": "_common.scss",
+                  "type": "file",
+                  "description": "Common base styles"
+                },
+                {
+                  "name": "_layout.scss",
+                  "type": "file",
+                  "description": "Base layout styles for overall site structure"
+                },
+                {
+                  "name": "_mixins.scss",
+                  "type": "file",
+                  "description": "SCSS mixins for reusable style patterns"
+                },
+                {
+                  "name": "_responsive.scss",
+                  "type": "file",
+                  "description": "Responsive design helpers"
+                },
+                {
+                  "name": "_theme.scss",
+                  "type": "file",
+                  "description": "Theme-specific styles"
+                },
+                {
+                  "name": "_typography.scss",
+                  "type": "file",
+                  "description": "Typography styles"
+                },
+                {
+                  "name": "_utilities.scss",
+                  "type": "file",
+                  "description": "Utility classes"
+                },
+                {
+                  "name": "_variables.scss",
+                  "type": "file",
+                  "description": "SCSS variables for spacing, breakpoints, etc."
+                }
+              ]
+            },            {              "name": "_components",
+              "type": "directory",
+              "description": "Component-specific styles",
+              "children": [
+                {
+                  "name": "_timeline.scss",
+                  "type": "file",
+                  "description": "Timeline component styles for interactive timelines"
+                },
+                {
+                  "name": "_interactive-module.scss",
+                  "type": "file", 
+                  "description": "Interactive module component styles with hover effects"
+                },
+                {
+                  "name": "_card-component.scss",
+                  "type": "file",
+                  "description": "Reusable card component mixins for consistent card styling"
+                },                {
+                  "name": "_image-card-component.scss",
+                  "type": "file",
+                  "description": "Reusable image card component mixins for cards with images"
+                },
+                {
+                  "name": "_back-to-top.scss",
+                  "type": "file",
+                  "description": "Styles for the back-to-top button that appears when scrolling"
+                },
+                {
+                  "name": "_section-component.scss",
+                  "type": "file",
+                  "description": "Reusable section component mixins for consistent section layouts"
+                },
+                {
+                  "name": "_layout-component.scss",
+                  "type": "file",
+                  "description": "Reusable layout component mixins for page structures"
+                },
+                {
+                  "name": "_form-component.scss",
+                  "type": "file",
+                  "description": "Reusable form component mixins for form styling"
+                },
+                {
+                  "name": "_team-component.scss",
+                  "type": "file",
+                  "description": "Reusable team component mixins for team member profiles"
+                },
+                {
+                  "name": "_header-component.scss",
+                  "type": "file",
+                  "description": "Reusable header component mixins for page headers"
+                },
+                {
+                  "name": "_content-section-component.scss",
+                  "type": "file",
+                  "description": "Reusable content section component mixins for text-based content"
+                },
+                {
+                  "name": "_hero-component.scss",
+                  "type": "file",
+                  "description": "Reusable hero component mixins for hero sections"
+                },
+                {
+                  "name": "_products-grid-component.scss",
+                  "type": "file",
+                  "description": "Reusable products grid component mixins for product displays"
+                },
+                {
+                  "name": "_cta-component.scss",
+                  "type": "file",
+                  "description": "Reusable call-to-action component mixins"
+                },
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "description": "Documentation for SCSS component system"
+                },
+                {
+                  "name": "_cta.scss",
+                  "type": "file",
+                  "description": "Call-to-action component styles"
+                },
+                {
+                  "name": "_feature-grid.scss",
+                  "type": "file",
+                  "description": "Feature grid component styles"
+                },
+                {
+                  "name": "_footer.scss",
+                  "type": "file",
+                  "description": "Footer component styles"
+                },
+                {
+                  "name": "_header.scss",
+                  "type": "file",
+                  "description": "Header component styles"
+                },
+                {
+                  "name": "_hero.scss",
+                  "type": "file",
+                  "description": "Hero component styles"
+                },
+                {
+                  "name": "_linkedin.scss",
+                  "type": "file",
+                  "description": "LinkedIn component styles"
+                },
+                {
+                  "name": "_navbar.scss",
+                  "type": "file",
+                  "description": "Navigation bar styles"
+                },
+                {
+                  "name": "_product-applications.scss",
+                  "type": "file",
+                  "description": "Product applications/use cases component styles"
+                },
+                {
+                  "name": "_product-benefits-list.scss",
+                  "type": "file",
+                  "description": "Product benefits list component styles"
+                },
+                {
+                  "name": "_product-card.scss",
+                  "type": "file",
+                  "description": "Product card component styles"
+                },
+                {
+                  "name": "_product-code-example.scss",
+                  "type": "file",
+                  "description": "Product code example component styles"
+                },
+                {
+                  "name": "_product-feature-grid.scss",
+                  "type": "file",
+                  "description": "Product feature grid component styles"
+                },
+                {
+                  "name": "_product-layout.scss",
+                  "type": "file",
+                  "description": "Product layout base styles"
+                },
+                {
+                  "name": "_product-page.scss",
+                  "type": "file",
+                  "description": "Legacy product page styles (for backward compatibility)"
+                },
+                {
+                  "name": "_product-section-container.scss",
+                  "type": "file",
+                  "description": "Product section container component styles"
+                },
+                {
+                  "name": "_product-visual.scss",
+                  "type": "file",
+                  "description": "Product visual/diagram component styles"
+                },
+                {
+                  "name": "_section-header.scss",
+                  "type": "file",
+                  "description": "Section header component styles"
+                },
+                {
+                  "name": "_testimonial.scss",
+                  "type": "file",
+                  "description": "Testimonial component styles"
+                }
+              ]
+            },
+            {
+              "name": "bootstrap",
+              "type": "directory",
+              "description": "Bootstrap v5.3.5 files"
+            },
+            {
+              "name": "pages",
+              "type": "directory",
+              "description": "Page-specific styles",
+              "children": [
+                {
+                  "name": "_about.scss",
+                  "type": "file",
+                  "description": "About page styles"
+                },
+                {
+                  "name": "_agent-operating-system.scss",
+                  "type": "file",
+                  "description": "Agent Operating System page styles"
+                },
+                {
+                  "name": "_business-infinity.scss",
+                  "type": "file",
+                  "description": "Business Infinity page styles"
+                },
+                {
+                  "name": "_entrepreneur.scss",
+                  "type": "file",
+                  "description": "Entrepreneur page styles"
+                },
+                {
+                  "name": "_github-agent.scss",
+                  "type": "file",
+                  "description": "GitHub Agent page styles"
+                },
+                {
+                  "name": "_home.scss",
+                  "type": "file",
+                  "description": "Home page styles"
+                },
+                {
+                  "name": "_privacy-policy.scss",
+                  "type": "file",
+                  "description": "Privacy policy page styles"
+                },
+                {
+                  "name": "_purpose-driven-agent.scss",
+                  "type": "file",
+                  "description": "Purpose Driven Agent page styles"
+                },
+                {
+                  "name": "_realm-of-agents.scss",
+                  "type": "file",
+                  "description": "Realm of Agents page styles"
+                },
+                {
+                  "name": "_sitemap.scss",
+                  "type": "file",
+                  "description": "Sitemap page styles"
+                },
+                {
+                  "name": "_startup.scss",
+                  "type": "file",
+                  "description": "Startup page styles"
+                },
+                {
+                  "name": "_contact-page.scss",
+                  "type": "file",
+                  "description": "Contact page styles"
+                },
+                {
+                  "name": "_legacy-page.scss",
+                  "type": "file",
+                  "description": "Legacy page styles"
+                },
+                {
+                  "name": "_possibilities-page.scss",
+                  "type": "file",
+                  "description": "Possibilities page styles"
+                },
+                {
+                  "name": "_resources-page.scss",
+                  "type": "file",
+                  "description": "Resources page styles"
+                },
+                {
+                  "name": "_saga-page.scss",
+                  "type": "file",
+                  "description": "Saga page styles"
+                },
+                {
+                  "name": "_thoughtlab-page.scss",
+                  "type": "file",
+                  "description": "Thought Lab page styles"
+                }
+              ]
+            },
+            {
+              "name": "sections",
+              "type": "directory",
+              "description": "Section-specific styles"
+            }
+          ]
+        },        {
+          "name": "images",
+          "type": "directory",
+          "description": "Image assets for the site",
+          "children": [
+            {
+              "name": "team",
+              "type": "directory",
+              "description": "Team member profile images for the About page",
+              "children": [
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "description": "Documentation for team member image requirements"
+                }
+              ]
+            }
+          ]
+        },        {
+          "name": "js",
+          "type": "directory",
+          "description": "JavaScript files",
+          "children": [
+            {
+              "name": "animations.js",
+              "type": "file",
+              "description": "Animation and interactive feature scripts including parallax effects, micro-interactions and timeline animations"
+            },
+            {
+              "name": "card-template.js",
+              "type": "file",
+              "description": "JavaScript for card template functionality"
+            },
+            {
+              "name": "linkedin-auth.js",
+              "type": "file",
+              "description": "LinkedIn authentication script"
+            },
+            {
+              "name": "script.js",
+              "type": "file",
+              "description": "Main JavaScript file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "type": "directory",
+      "description": "About page",
+      "children": [
+        {
+          "name": "index.html",
+          "type": "file",
+          "description": "About page template"
+        }
+      ]
+    },
+    {
+      "name": "business-infinity",
+      "type": "directory",
+      "description": "Business Infinity product pages",
+      "children": [
+        {
+          "name": "index.html",
+          "type": "file",
+          "description": "Business Infinity main page using data from _data/business_infinity.yml"
+        },
+        {
+          "name": "privacy-policy.html",
+          "type": "file",
+          "description": "Privacy policy page"
+        },
+        {
+          "name": "entrepreneur",
+          "type": "directory",
+          "description": "Entrepreneur product pages",
+          "children": [
+            {
+              "name": "index.html",
+              "type": "file",
+              "description": "Entrepreneur landing page using data from _data/business_infinity_entrepreneur.yml"
+            }
+          ]
+        },
+        {
+          "name": "startup",
+          "type": "directory",
+          "description": "Startup product pages",
+          "children": [
+            {
+              "name": "index.html",
+              "type": "file",
+              "description": "Startup landing page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "realm-of-agents",
+      "type": "directory",
+      "description": "Realm of Agents product pages",
+      "children": [
+        {
+          "name": "agent-operating-system",
+          "type": "directory",
+          "description": "Agent Operating System product pages",
+          "children": [
+            {
+              "name": "index.html",
+              "type": "file",
+              "description": "Agent Operating System landing page using data from _data/agent_operating_system.yml"
+            }
+          ]
+        },
+        {
+          "name": "github-agent",
+          "type": "directory",
+          "description": "GitHub Agent product pages",
+          "children": [
+            {
+              "name": "index.html",
+              "type": "file",
+              "description": "GitHub Agent landing page using data from _data/github_agent.yml"
+            }
+          ]
+        },
+        {
+          "name": "purpose-driven-agent",
+          "type": "directory",
+          "description": "Purpose Driven Agent product pages",
+          "children": [
+            {
+              "name": "index.html",
+              "type": "file",
+              "description": "Purpose Driven Agent landing page using data from _data/purpose_driven_agent.yml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sitemap",
+      "type": "directory",
+      "description": "Site navigation pages",
+      "children": [
+        {
+          "name": "index.html",
+          "type": "file",
+          "description": "Sitemap page"
+        }
+      ]
+    },
+  ]
+}
