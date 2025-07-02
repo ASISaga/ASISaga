@@ -21,6 +21,7 @@ asisaga.com is a static Jekyll website on GitHub Pages, located in the `Website`
 - Each Jekyll UI component in `_includes` must have a matching SCSS partial in `/assets/css/components/`
 - Each HTML page must have a matching SCSS file in `/assets/css/pages/` directory
 - Each HTML element in a Jekyll UI component or HTML page must have exactly one SCSS class in its respective SCSS file
+- **Subdomain site JavaScript loading:** Each subdomain site (`www`, `realmofagents`, `businessinfinity`) includes a `script.js` in its `<head>`, which imports `common.js` from the theme site (`common.asisaga.com/assets/js`). All shared JS (including Bootstrap logic) must be imported via `common.js` for consistency and maintainability across subdomains.
 
 #### SCSS Structure & Components
 - Bootstrap v5.3.5 with dependencies in `assets/css/bootstrap`
