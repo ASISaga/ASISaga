@@ -1,10 +1,12 @@
+---
+applyTo: "Website/*.{scss,html,liquid},Website/*/**/*.{scss,html,liquid}"
+description: "UI design guidance for Copilot when generating ASI Saga’s SCSS styles and Jekyll Liquid templates for the theme and all subdomains in the Website folder. Applies generically to all current and future subdomains."
+---
+
 # Website Structure & Jekyll Conventions
 
 ## Website Structure
-- asisaga.com has three subdomains: `www`, `realmofagents`, and `businessinfinity`. Each subdomain is implemented as its own submodule within the `Website` folder:
-  - `www.asisaga.com`
-  - `realmofagents.asisaga.com`
-  - `businessinfinity.asisaga.com`
+- asisaga.com is organized into multiple subdomains (e.g., `www`, `realmofagents`, `businessinfinity`), each implemented as its own submodule within the `Website` folder.
 - The Jekyll theme is located in the `common.asisaga.com` submodule. This theme is applied to all subdomains by GitHub Pages at compile time.
 - The structure of the website is documented in `website_structure.json`. Keep this file updated for any structural changes made in the website.
 
@@ -19,7 +21,7 @@
 - Each Jekyll UI component in `_includes` must have a matching SCSS partial in `/assets/css/components/`
 - Each HTML page must have a matching SCSS file in `/assets/css/pages/` directory
 - Each HTML element in a Jekyll UI component or HTML page must have exactly one SCSS class in its respective SCSS file
-- **Subdomain site JavaScript loading:** Each subdomain site (`www`, `realmofagents`, `businessinfinity`) includes a `script.js` in its `<head>`, which imports `common.js` from the theme site (`common.asisaga.com/assets/js`). All shared JS (including Bootstrap logic) must be imported via `common.js` for consistency and maintainability across subdomains.
+- **Subdomain site JavaScript loading:** Each subdomain site includes a `script.js` in its `<head>`, which imports `common.js` from the theme site (`common.asisaga.com/assets/js`). All shared JS (including Bootstrap logic) must be imported via `common.js` for consistency and maintainability across subdomains.
 - **Theme merging:** The `_layouts`, `_includes`, `_sass`, and `assets` directories from the `common.asisaga.com` theme are automatically merged into each subdomain site during the Jekyll site build by GitHub Pages. Do not manually copy these folders into subdomains; update or add components, layouts, styles, or assets in the theme and all subdomains will inherit them on the next build.
 
 # SCSS Structure & Components
