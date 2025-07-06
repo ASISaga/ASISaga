@@ -1,0 +1,10 @@
+{
+  "stylelint.validate": ["css", "scss"],
+  "stylelint.configFile": "Website/stylelint.config.js",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  }
+}
