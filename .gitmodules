@@ -2,9 +2,9 @@
 # changes would be pushed to the respective repositories
 
 # Website submodules
-[submodule "common.asisaga.com"]
-	path = Website/common.asisaga.com
-	url = https://github.com/ASISaga/common.asisaga.com
+[submodule "theme.asisaga.com"]
+	path = Website/theme.asisaga.com
+	url = https://github.com/ASISaga/theme.asisaga.com
 
 [submodule "www.asisaga.com"]
 	path = Website/www.asisaga.com
