@@ -1,10 +1,9 @@
 module.exports = {
-  extends: ["stylelint-config-standard-scss"],
+  extends: ["stylelint-config-recommended-scss"],
   plugins: ["stylelint-scss"],
   rules: {
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true,
-    "indentation": 2,
+    "scss/at-rule-no-unknown": true,              // catch mistyped mixins, functions
+    "scss/dollar-variable-colon-space-after": "always",
     "no-empty-source": true
   }
 };

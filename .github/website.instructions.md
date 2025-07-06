@@ -24,6 +24,7 @@ description: "UI design guidance for Copilot when generating ASI Saga’s SCSS s
 - **Subdomain site JavaScript loading:** Each subdomain site includes a `script.js` in its `<head>`, which imports `common.js` from the theme site (`theme.asisaga.com/assets/js`). All shared JS (including Bootstrap logic) must be imported via `common.js` for consistency and maintainability across subdomains.
 - **Theme merging:** The `_layouts`, `_includes`, `_sass`, and `assets` directories from the `theme.asisaga.com` theme are automatically merged into each subdomain site during the Jekyll site build by GitHub Pages. Do not manually copy these folders into subdomains; update or add components, layouts, styles, or assets in the theme and all subdomains will inherit them on the next build.
 
+
 # SCSS Structure & Components
 
 ## Bootstrap Integration
@@ -42,8 +43,9 @@ description: "UI design guidance for Copilot when generating ASI Saga’s SCSS s
 - Common SCSS for the theme is kept in the theme's `_sass` directory, with `_common.scss` as the entry point for shared styles.
 - Each subdomain maintains its own SCSS in its respective `_sass` directory, with `_main.scss` as the entry point for subdomain-specific styles.
 - The theme provides a `style.scss` file in `assets/css`, which is included in the HTML `<head>`.
-- `style.scss` imports `_common.scss` from the theme and `_main.scss` from the respective subdomain, ensuring both shared and subdomain-specific styles are applied.
+- `style.scss` loads `_common.scss` from the theme and `_main.scss` from the respective subdomain, ensuring both shared and subdomain-specific styles are applied.
 - **All SCSS updates must be made in the appropriate `_sass` directory for the theme or subdomain. Do not edit or add SCSS directly in `assets/css` except for the `style.scss` import file.**
+- **All SCSS files in the theme and all subdomains must use SCSS's modern module system: use `@use` and `@forward` instead of `@import`. Refactor any legacy `@import` statements to use `@use`/`@forward` for modularity, maintainability, and compatibility with future Sass versions.**
 
 ### Partials & Directory Structure
 - Name partials with underscore prefix: `_partial-name.scss`
