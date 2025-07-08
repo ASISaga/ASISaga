@@ -6,5 +6,6 @@
   "scss.validate": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
-  }
+  },
+  "azureFunctions.projectSubpath": "RealmOfAgents\\FineTunedLLM\\azure-functions\\finetuning-pipeline"
 }
