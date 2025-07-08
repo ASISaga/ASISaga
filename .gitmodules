@@ -22,6 +22,9 @@
 	path = Website/businessinfinity.asisaga.com
 	url = https://github.com/ASISaga/businessinfinity.asisaga.com
 
+[submodule "genesis.asisaga.com"]
+	path = Website/genesis.asisaga.com
+	url = https://github.com/ASISaga/genesis.asisaga.com
 
 # Realm of Agents submodules
 [submodule "FineTunedLLM"]
