@@ -6,7 +6,7 @@ description: "UI design guidance for Copilot when generating ASI Saga’s SCSS s
 # Website Structure & Jekyll Conventions
 
 ## Website Structure
-- asisaga.com is organized into multiple subdomains (e.g., `www`, `realmofagents`, `businessinfinity`), each implemented as its own submodule within the `Website` folder.
+- asisaga.com is organized into multiple subdomains (e.g., `www`, `realmofagents`, `businessinfinity`, `saga`), each implemented as its own submodule within the `Website` folder.
 - The Jekyll theme is located in the `theme.asisaga.com` submodule. This theme is applied to all subdomains by GitHub Pages at compile time.
 - The structure of the website is documented in `website_structure.json`. Keep this file updated for any structural changes made in the website.
 
