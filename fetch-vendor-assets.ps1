@@ -1,5 +1,5 @@
 # Set destination folder
-$vendorPath = "Website\common.asisaga.com\assets\js\vendor"
+$vendorPath = "Website\theme.asisaga.com\assets\js\vendor"
 
 # Create folder if it doesn't exist
 if (-Not (Test-Path $vendorPath)) {

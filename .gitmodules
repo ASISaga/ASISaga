@@ -10,9 +10,13 @@
 	path = Website/www.asisaga.com
 	url = https://github.com/ASISaga/www.asisaga.com
 
-[submodule "Website/realmofagents.asisaga.com"]
+[submodule "realmofagents.asisaga.com"]
 	path = Website/realmofagents.asisaga.com
 	url = https://github.com/ASISaga/realmofagents.asisaga.com
+
+[submodule "saga.asisaga.com"]
+	path = Website/saga.asisaga.com
+	url = https://github.com/ASISaga/saga.asisaga.com
 
 [submodule "businessinfinity.asisaga.com"]
 	path = Website/businessinfinity.asisaga.com

@@ -4,7 +4,7 @@
   "description": "Monorepo for all ASISaga static sites and themes (Jekyll)",
   "children": [
     {
-      "name": "common.asisaga.com",
+      "name": "theme.asisaga.com",
       "type": "directory",
       "description": "Jekyll theme for all asisaga.com sites and subdomains. Contains _includes, _layouts, _sass, assets, and shared data.",
       "children": []
@@ -12,19 +12,19 @@
     {
       "name": "www.asisaga.com",
       "type": "directory",
-      "description": "Main website for asisaga.com. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Main website for asisaga.com. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": []
     },
     {
       "name": "businessinfinity.asisaga.com",
       "type": "directory",
-      "description": "Business Infinity subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Business Infinity subdomain. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": []
     },
     {
       "name": "realmofagents.asisaga.com",
       "type": "directory",
-      "description": "Realm of Agents subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Realm of Agents subdomain. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": []
     },
     {
@@ -287,7 +287,7 @@
       "description": "Website structure representation for documentation"
     },
     {
-      "name": "common.asisaga.com",
+      "name": "theme.asisaga.com",
       "type": "directory",
       "description": "Shared Jekyll theme and includes for all ASISaga sites.",
       "children": [
@@ -329,7 +329,7 @@
     {
       "name": "www.asisaga.com",
       "type": "directory",
-      "description": "Main website for asisaga.com. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Main website for asisaga.com. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": [
         { "name": "_config.yml", "type": "file" },
         { "name": "CNAME", "type": "file" },
@@ -363,7 +363,7 @@
     {
       "name": "businessinfinity.asisaga.com",
       "type": "directory",
-      "description": "Business Infinity subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Business Infinity subdomain. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": [
         { "name": "_config.yml", "type": "file" },
         { "name": "CNAME", "type": "file" },
@@ -383,7 +383,7 @@
     {
       "name": "realmofagents.asisaga.com",
       "type": "directory",
-      "description": "Realm of Agents subdomain. Uses the common.asisaga.com theme via Jekyll includes and layouts.",
+      "description": "Realm of Agents subdomain. Uses the theme.asisaga.com theme via Jekyll includes and layouts.",
       "children": [
         { "name": "_config.yml", "type": "file" },
         { "name": "CNAME", "type": "file" },
