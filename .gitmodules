@@ -39,6 +39,10 @@
 	path = RealmOfAgents/GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
 
+[submodule "SelfLearningAgent"]
+	path = RealmOfAgents/SelfLearningAgent
+	url = https://github.com/ASISaga/SelfLearningAgent
+
 [submodule "AgentOperatingSystem"]
 	path = RealmOfAgents/AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
