@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "asisaga": {
+      "url": "https://mcp.asisaga.com/v1/",
+      "headers": {
+        "Authorization": "Bearer ${input:github_mcp_pat}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "github_mcp_pat",
+      "type": "promptString",
+      "description": "GitHub PAT for ASISaga",
+      "password": true
+    }
+  ]
+}
