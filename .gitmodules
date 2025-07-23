@@ -57,7 +57,7 @@
 	url = https://github.com/ASISaga/BusinessInfinity
 
 
-# Oracle document store submodules
-[submodule "Oracle"]
-	path = Oracle
-	url = https://github.com/ASISaga/Oracle.git
+# Manas document store submodules
+[submodule "Manas"]
+	path = Manas
+	url = https://github.com/ASISaga/Manas.git
