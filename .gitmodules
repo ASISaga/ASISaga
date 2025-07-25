@@ -47,9 +47,9 @@
 	path = RealmOfAgents/AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
-[submodule "MCPServer"]
-	path = RealmOfAgents/MCPServer
-	url = https://github.com/ASISaga/MCPServer
+[submodule "mcp.asisaga.com"]
+	path = mcp.asisaga.com
+	url = https://github.com/ASISaga/mcp.asisaga.com
 
 # Business Infinity submodules
 [submodule "BusinessInfinity"]
