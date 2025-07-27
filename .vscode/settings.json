@@ -6,5 +6,12 @@
   "scss.validate": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
-  }
+  },
+  "python.defaultInterpreterPath": "${workspaceRoot}/.venv/Scripts/python.exe",
+  "azureFunctions.projectSubpath": "BusinessInfinity",
+  "azureFunctions.deploySubpath": "BusinessInfinity",
+  "azureFunctions.scmDoBuildDuringDeployment": true,
+  "azureFunctions.pythonVenv": ".venv",
+  "azureFunctions.projectLanguage": "Python",
+  "azureFunctions.projectRuntime": "~4"
 }
