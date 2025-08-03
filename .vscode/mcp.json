@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "manas": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "${workspaceFolder}/Manas"
+        ]
+    }
+  }
+}

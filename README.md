@@ -61,3 +61,6 @@ pip install datasets
 
 pip install openai
 pip install azure-storage-blob
+
+# MCP Server for Manas
+npm install -g @modelcontextprotocol/server-filesystem
