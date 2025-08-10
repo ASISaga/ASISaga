@@ -65,3 +65,25 @@
 [submodule "Manas"]
 	path = Manas
 	url = https://github.com/ASISaga/Manas.git
+
+# Buddhi submodules
+
+[submodule "Entrepreneur"]
+	path = Buddhi/Entrepreneur
+	url = https://github.com/ASISaga/Entrepreneur
+
+[submodule "Leader"]
+	path = Buddhi/Leader
+	url = https://github.com/ASISaga/Leader
+
+[submodule "Seeker"]
+	path = Buddhi/Seeker
+	url = https://github.com/ASISaga/Seeker
+
+[submodule "Marketeer"]
+	path = Buddhi/Marketeer
+	url = https://github.com/ASISaga/Marketeer
+
+[submodule "Investor"]
+	path = Buddhi/Investor
+	url = https://github.com/ASISaga/Investor
