@@ -7,6 +7,10 @@
           "@modelcontextprotocol/server-filesystem",
           "${workspaceFolder}/Manas"
         ]
+    },
+    "github-mcp-server": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "type": "http"
     }
   }
 }
