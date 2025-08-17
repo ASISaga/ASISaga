@@ -1,0 +1,72 @@
+architecture-beta
+    group mcp_group(cloud)[MCPAsisaga]
+    service mcp_func(server)[AzureFunctionApp] in mcp_group
+    service mcp_readme(disk)[Readme] in mcp_group
+    service mcp_requirements(disk)[Requirements] in mcp_group
+    service mcp_pyproject(disk)[Pyproject] in mcp_group
+    service mcp_infra(disk)[Infra] in mcp_group
+    service mcp_src(disk)[Src] in mcp_group
+    service mcp_localsettings(disk)[LocalSettings] in mcp_group
+    service mcp_azureyaml(disk)[AzureYaml] in mcp_group
+    service mcp_hostjson(disk)[HostJson] in mcp_group
+
+    group bi_group(cloud)[BusinessInfinity]
+    service bi_func(server)[AzureFunctionApp] in bi_group
+    service bi_readme(disk)[Readme] in bi_group
+    service bi_requirements(disk)[Requirements] in bi_group
+    service bi_localsettings(disk)[LocalSettings] in bi_group
+    service bi_azureyaml(disk)[AzureYaml] in bi_group
+    service bi_hostjson(disk)[HostJson] in bi_group
+    service bi_api(disk)[Api] in bi_group
+    service bi_config(disk)[Config] in bi_group
+    service bi_docs(disk)[Docs] in bi_group
+    service bi_lora(disk)[LoraPipeline] in bi_group
+    service bi_server(disk)[Server] in bi_group
+    service bi_test(disk)[Test] in bi_group
+
+    group roa_group(cloud)[RealmOfAgents]
+    service roa_readme(disk)[Readme] in roa_group
+    service roa_agentos(disk)[AgentOperatingSystem] in roa_group
+    service roa_finetunedllm(disk)[FineTunedLLM] in roa_group
+    service roa_githubagent(disk)[GitHubAgent] in roa_group
+    service roa_purposedriven(disk)[PurposeDrivenAgent] in roa_group
+    service roa_selflearning(disk)[SelfLearningAgent] in roa_group
+
+    group website_group(cloud)[Website]
+    service website_pkgjson(disk)[PackageJson] in website_group
+    service website_stylelint(disk)[StylelintConfig] in website_group
+    service website_subdomains(disk)[Subdomains] in website_group
+    service website_structure(disk)[WebsiteStructure] in website_group
+    service website_aurelion(disk)[Aurelion] in website_group
+    service website_businessinfinity(disk)[BusinessInfinitySite] in website_group
+    service website_genesis(disk)[Genesis] in website_group
+    service website_realmofagents(disk)[RealmOfAgents] in website_group
+    service website_saga(disk)[Saga] in website_group
+    service website_theme(disk)[Theme] in website_group
+    service website_www(disk)[Main] in website_group
+
+    group buddhi_group(cloud)[Buddhi]
+    service buddhi_entrepreneur(disk)[Entrepreneur] in buddhi_group
+    service buddhi_investor(disk)[Investor] in buddhi_group
+    service buddhi_leader(disk)[Leader] in buddhi_group
+    service buddhi_marketeer(disk)[Marketeer] in buddhi_group
+    service buddhi_seeker(disk)[Seeker] in buddhi_group
+
+    group manas_group(cloud)[Manas]
+    service manas_docstructure(disk)[DocStructure] in manas_group
+    service manas_readme(disk)[Readme] in manas_group
+    service manas_businessinfinity(disk)[BusinessInfinity] in manas_group
+    service manas_company(disk)[Company] in manas_group
+    service manas_creator(disk)[Creator] in manas_group
+    service manas_poetry(disk)[Poetry] in manas_group
+    service manas_project(disk)[Project] in manas_group
+    service manas_roadmap(disk)[RoadmapToAGI] in manas_group
+    service manas_saga(disk)[Saga] in manas_group
+    service manas_symbolickb(disk)[SymbolicKB] in manas_group
+    service manas_website(disk)[Website] in manas_group
+
+    mcp_func:R -- L:bi_func
+    bi_func:R -- L:roa_agentos
+    roa_agentos:R -- L:website_pkgjson
+    website_pkgjson:R -- L:buddhi_entrepreneur
+    buddhi_entrepreneur:R -- L:manas_docstructure
