@@ -68,9 +68,9 @@
 
 # Buddhi submodules
 
-[submodule "Entrepreneur"]
-	path = Buddhi/Entrepreneur
-	url = https://github.com/ASISaga/Entrepreneur
+[submodule "Founder"]
+	path = Buddhi/Founder
+	url = https://github.com/ASISaga/Founder
 
 [submodule "Leader"]
 	path = Buddhi/Leader
