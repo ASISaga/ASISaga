@@ -87,3 +87,15 @@
 [submodule "Investor"]
 	path = Buddhi/Investor
 	url = https://github.com/ASISaga/Investor
+
+[submodule "Poet"]
+	path = Buddhi/Poet
+	url = https://github.com/ASISaga/Poet
+
+[submodule "Strategist"]
+	path = Buddhi/Strategist
+	url = https://github.com/ASISaga/Strategist
+
+[submodule "Executive"]
+	path = Buddhi/Executive
+	url = https://github.com/ASISaga/Executive
