@@ -80,10 +80,6 @@
 	path = Buddhi/Seeker
 	url = https://github.com/ASISaga/Seeker
 
-[submodule "Marketeer"]
-	path = Buddhi/Marketeer
-	url = https://github.com/ASISaga/Marketeer
-
 [submodule "Investor"]
 	path = Buddhi/Investor
 	url = https://github.com/ASISaga/Investor
@@ -92,10 +88,22 @@
 	path = Buddhi/Poet
 	url = https://github.com/ASISaga/Poet
 
-[submodule "Strategist"]
-	path = Buddhi/Strategist
-	url = https://github.com/ASISaga/Strategist
+[submodule "CSO"]
+	path = Buddhi/CSO
+	url = https://github.com/ASISaga/CSO
 
-[submodule "Executive"]
-	path = Buddhi/Executive
-	url = https://github.com/ASISaga/Executive
+[submodule "CEO"]
+	path = Buddhi/CEO
+	url = https://github.com/ASISaga/CEO
+
+[submodule "CMO"]
+	path = Buddhi/CMO
+	url = https://github.com/ASISaga/CMO
+
+[submodule "CFO"]
+	path = Buddhi/CFO
+	url = https://github.com/ASISaga/CFO
+
+[submodule "COO"]
+	path = Buddhi/COO
+	url = https://github.com/ASISaga/COO

@@ -11,6 +11,10 @@
     "github-mcp-server": {
       "url": "https://api.githubcopilot.com/mcp/",
       "type": "http"
+    },
+    "asana": {
+    "command": "npx",
+    "args": ["mcp-remote", "https://mcp.asana.com/sse"]
     }
   }
 }
