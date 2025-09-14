@@ -63,7 +63,13 @@
 	path = MCP/spec-kit-mcp
 	url = https://github.com/ASISaga/spec-kit-mcp
 
+[submodule "linkedin-mcp-server"]
+	path = MCP/linkedin-mcp-server
+	url = https://github.com/ASISaga/linkedin-mcp-server
 
+[submodule "mcp-reddit"]
+	path = MCP/mcp-reddit
+	url = https://github.com/ASISaga/mcp-reddit
 
 # Business Infinity submodules
 [submodule "BusinessInfinity"]
