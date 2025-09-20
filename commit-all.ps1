@@ -12,21 +12,30 @@ $repos = Get-ChildItem -Recurse -Directory -Force -ErrorAction SilentlyContinue 
          ForEach-Object { Split-Path -Parent $_.FullName } |
          Sort-Object -Unique
 
+function Commit-And-Push($path, $message) {
+    Set-Location $path
+    # Check if repo is dirty (has changes)
+    $status = git status --porcelain
+    if (-not [string]::IsNullOrWhiteSpace($status)) {
+        Write-Host "📂 Processing repo: $path" -ForegroundColor Cyan
+        git add .
+        git commit -m $message
+        git push
+    }
+    else {
+        Write-Host "✔️ Clean repo, skipping: $path" -ForegroundColor DarkGray
+    }
+}
+
 # Process nested repos first
 foreach ($repoPath in $repos) {
-    Write-Host "📂 Processing nested repo: $repoPath ..." -ForegroundColor Cyan
-    Set-Location $repoPath
-
-    git add .
-    git commit -m $CommitMessage 2>$null
-    git push
+    Commit-And-Push $repoPath $CommitMessage
 }
 
 # Finally, process the root repo
-Set-Location $rootPath
-Write-Host "📂 Processing ROOT repo: $rootPath ..." -ForegroundColor Yellow
-git add .
-git commit -m $CommitMessage 2>$null
-git push
+Commit-And-Push $rootPath $CommitMessage
 
-Write-Host "✅ All nested repos and root repo committed and pushed." -ForegroundColor Green
+# Return to root
+Set-Location $rootPath
+
+Write-Host "✅ All dirty repos committed and pushed. Clean repos skipped." -ForegroundColor Green
