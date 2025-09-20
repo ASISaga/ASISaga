@@ -9,7 +9,8 @@ $rootPath = Get-Location
 # Find all nested repos (excluding the root .git folder)
 $repos = Get-ChildItem -Recurse -Directory -Force -ErrorAction SilentlyContinue |
          Where-Object { $_.Name -eq ".git" -and $_.FullName -ne (Join-Path $rootPath ".git") } |
-         Select-Object -ExpandProperty ParentFullName -Unique
+         ForEach-Object { Split-Path -Parent $_.FullName } |
+         Sort-Object -Unique
 
 # Process nested repos first
 foreach ($repoPath in $repos) {
