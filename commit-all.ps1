@@ -1,6 +1,6 @@
+
 param (
-    [Parameter(Mandatory = $true)]
-    [string]$CommitMessage
+    [string]$CommitMessage = "Update"
 )
 
 # Store the starting folder (root repo path)
@@ -28,11 +28,13 @@ function Commit-And-Push($path, $message) {
 }
 
 # Process nested repos first
+
 foreach ($repoPath in $repos) {
     Commit-And-Push $repoPath $CommitMessage
 }
 
 # Finally, process the root repo
+
 Commit-And-Push $rootPath $CommitMessage
 
 # Return to root
