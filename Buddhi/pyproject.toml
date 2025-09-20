@@ -1,0 +1,15 @@
+[project]
+name = "Buddhi"
+version = "0.1.0"
+description = "Buddhi - Agent submodules for creative, strategic, and seeker logic."
+authors = [ { name = "ASISaga" } ]
+requires-python = ">=3.8"
+dependencies = [
+    "Poet @ git+https://github.com/ASISaga/Poet.git",
+    "Seeker @ git+https://github.com/ASISaga/Seeker.git",
+    "CSO @ git+https://github.com/ASISaga/CSO.git"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
