@@ -35,6 +35,14 @@
 	path = RealmOfAgents/FineTunedLLM
 	url = https://github.com/ASISaga/FineTunedLLM
 
+[submodule "SelfLearningAgent"]
+	path = RealmOfAgents/SelfLearningAgent
+	url = https://github.com/ASISaga/SelfLearningAgent
+
+[submodule "PossibilityDrivenAgent"]
+	path = RealmOfAgents/PossibilityDrivenAgent
+	url = https://github.com/ASISaga/PossibilityDrivenAgent
+
 [submodule "PurposeDrivenAgent"]
 	path = RealmOfAgents/PurposeDrivenAgent
 	url = https://github.com/ASISaga/PurposeDrivenAgent
@@ -42,10 +50,6 @@
 [submodule "GitHubAgent"]
 	path = RealmOfAgents/GitHubAgent
 	url = https://github.com/ASISaga/GitHubAgent
-
-[submodule "SelfLearningAgent"]
-	path = RealmOfAgents/SelfLearningAgent
-	url = https://github.com/ASISaga/SelfLearningAgent
 
 [submodule "AgentOperatingSystem"]
 	path = RealmOfAgents/AgentOperatingSystem
