@@ -1,18 +1,13 @@
 [project]
-name = "albatross"
+name = "ASISaga"
 version = "0.1.0"
-requires-python = ">=3.12"
-dependencies = ["bird-feeder", "tqdm>=4,<5"]
-
-[tool.uv.sources]
-bird-feeder = { workspace = true }
+description = "ASISaga - Comprehensive AI Agent System with Agent Operating System (AOS) and Business Infinity (BI)"
+requires-python = ">=3.8"
+dependencies = ["python-dotenv>=1.0.1"]
 
 [tool.uv.workspace]
 members = [
-	"RealmOfAgents/PurposeDrivenAgent",
-	"RealmOfAgents/SelfLearningAgent",
 	"RealmOfAgents/AgentOperatingSystem",
-	"RealmOfAgents/FineTunedLLM",
 	"BusinessInfinity",
 	"MCP/ERPNext-MCP",
 	"MCP/linkedin-mcp-server"
