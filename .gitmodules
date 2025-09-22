@@ -55,6 +55,48 @@
 	path = RealmOfAgents/AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
+[submodule "Founder"]
+	path = RealmOfAgents/Founder
+	url = https://github.com/ASISaga/Founder
+
+[submodule "LeadershipAgent"]
+	path = RealmOfAgents/LeadershipAgent
+	url = https://github.com/ASISaga/LeadershipAgent
+
+[submodule "Seeker"]
+	path = RealmOfAgents/Seeker
+	url = https://github.com/ASISaga/Seeker
+
+[submodule "Investor"]
+	path = RealmOfAgents/Investor
+	url = https://github.com/ASISaga/Investor
+
+[submodule "Poet"]
+	path = RealmOfAgents/Poet
+	url = https://github.com/ASISaga/Poet
+
+[submodule "CSO"]
+	path = RealmOfAgents/CSO
+	url = https://github.com/ASISaga/CSO
+
+[submodule "CEO"]
+	path = RealmOfAgents/CEO
+	url = https://github.com/ASISaga/CEO
+
+[submodule "CMO"]
+	path = RealmOfAgents/CMO
+	url = https://github.com/ASISaga/CMO
+
+[submodule "CFO"]
+	path = RealmOfAgents/CFO
+	url = https://github.com/ASISaga/CFO
+
+[submodule "COO"]
+	path = RealmOfAgents/COO
+	url = https://github.com/ASISaga/COO
+
+
+
 [submodule "mcp.asisaga.com"]
 	path = MCP/mcp.asisaga.com
 	url = https://github.com/ASISaga/mcp.asisaga.com
@@ -88,42 +130,3 @@
 
 # Buddhi submodules
 
-[submodule "Founder"]
-	path = Buddhi/Founder
-	url = https://github.com/ASISaga/Founder
-
-[submodule "Leader"]
-	path = Buddhi/Leader
-	url = https://github.com/ASISaga/Leader
-
-[submodule "Seeker"]
-	path = Buddhi/Seeker
-	url = https://github.com/ASISaga/Seeker
-
-[submodule "Investor"]
-	path = Buddhi/Investor
-	url = https://github.com/ASISaga/Investor
-
-[submodule "Poet"]
-	path = Buddhi/Poet
-	url = https://github.com/ASISaga/Poet
-
-[submodule "CSO"]
-	path = Buddhi/CSO
-	url = https://github.com/ASISaga/CSO
-
-[submodule "CEO"]
-	path = Buddhi/CEO
-	url = https://github.com/ASISaga/CEO
-
-[submodule "CMO"]
-	path = Buddhi/CMO
-	url = https://github.com/ASISaga/CMO
-
-[submodule "CFO"]
-	path = Buddhi/CFO
-	url = https://github.com/ASISaga/CFO
-
-[submodule "COO"]
-	path = Buddhi/COO
-	url = https://github.com/ASISaga/COO
