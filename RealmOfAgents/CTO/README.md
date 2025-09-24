@@ -1,2 +1,0 @@
-# CTO
-Chief Technology Officer

@@ -56,7 +56,7 @@
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
 [submodule "Founder"]
-	path = RealmOfAgents/Founder
+	path = BusinessInfinity/Founder
 	url = https://github.com/ASISaga/Founder
 
 [submodule "LeadershipAgent"]
@@ -68,7 +68,7 @@
 	url = https://github.com/ASISaga/Seeker
 
 [submodule "Investor"]
-	path = RealmOfAgents/Investor
+	path = BusinessInfinity/Investor
 	url = https://github.com/ASISaga/Investor
 
 [submodule "Poet"]
@@ -76,31 +76,31 @@
 	url = https://github.com/ASISaga/Poet
 
 [submodule "CSO"]
-	path = RealmOfAgents/CSO
+	path = BusinessInfinity/C-Suite/CSO
 	url = https://github.com/ASISaga/CSO
 
 [submodule "CEO"]
-	path = RealmOfAgents/CEO
+	path = BusinessInfinity/C-Suite/CEO
 	url = https://github.com/ASISaga/CEO
 
 [submodule "CMO"]
-	path = RealmOfAgents/CMO
+	path = BusinessInfinity/C-Suite/CMO
 	url = https://github.com/ASISaga/CMO
 
 [submodule "CFO"]
-	path = RealmOfAgents/CFO
+	path = BusinessInfinity/C-Suite/CFO
 	url = https://github.com/ASISaga/CFO
 
 [submodule "COO"]
-	path = RealmOfAgents/COO
+	path = BusinessInfinity/C-Suite/COO
 	url = https://github.com/ASISaga/COO
 
 [submodule "CHRO"]
-	path = RealmOfAgents/CHRO
+	path = BusinessInfinity/C-Suite/CHRO
 	url = https://github.com/ASISaga/CHRO
 
 [submodule "CTO"]
-	path = RealmOfAgents/CTO
+	path = BusinessInfinity/C-Suite/CTO
 	url = https://github.com/ASISaga/CTO
 
 [submodule "mcp.asisaga.com"]
