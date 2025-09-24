@@ -95,7 +95,13 @@
 	path = RealmOfAgents/COO
 	url = https://github.com/ASISaga/COO
 
+[submodule "CHRO"]
+	path = RealmOfAgents/CHRO
+	url = https://github.com/ASISaga/CHRO
 
+[submodule "CTO"]
+	path = RealmOfAgents/CTO
+	url = https://github.com/ASISaga/CTO
 
 [submodule "mcp.asisaga.com"]
 	path = MCP/mcp.asisaga.com
@@ -129,4 +135,7 @@
 	url = https://github.com/ASISaga/Manas.git
 
 # Buddhi submodules
+[submodule "Mentor"]
+	path = Buddhi/Mentor
+	url = https://github.com/ASISaga/Mentor.git
 
