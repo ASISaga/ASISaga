@@ -139,6 +139,6 @@
 
 # Buddhi submodules
 [submodule "Mentor"]
-	path = Buddhi/Mentor
+	path = Boardroom/Mentor
 	url = https://github.com/ASISaga/Mentor.git
 
