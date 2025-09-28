@@ -13,24 +13,26 @@ if (-not (Test-Path $eggInfoDir)) {
 }
 
 # List of subdirectories to scan for pyproject.toml
-$subdirs = Get-ChildItem -Path $workspaceRoot -Directory
+
+# Recursively find all directories with a pyproject.toml
+$pyprojectDirs = Get-ChildItem -Path $workspaceRoot -Recurse -File -Filter 'pyproject.toml' | ForEach-Object { $_.DirectoryName } | Sort-Object -Unique
 $jobs = @()
 $results = @()
 
-foreach ($dir in $subdirs) {
-    $pyproject = Join-Path $dir.FullName 'pyproject.toml'
-    if (Test-Path $pyproject) {
-        $jobName = "Install_$($dir.Name)"
-        Write-Host "[$(Get-Date -Format o)] Starting install for $($dir.Name)"
-        $jobs += Start-Job -Name $jobName -ScriptBlock {
-            param($dirPath, $eggInfoDir)
-            try {
-                Push-Location $dirPath
-                Write-Host "[$(Get-Date -Format o)] Installing editable package in $dirPath"
-                $out = pip install -e . 2>&1
-                $exitCode = $LASTEXITCODE
-                Write-Host "[$(Get-Date -Format o)] Finished $dirPath with exit code $exitCode"
-                # Find .egg-info directory in this package
+foreach ($dirPath in $pyprojectDirs) {
+    $dir = Get-Item $dirPath
+    $jobName = "Install_$($dir.Name)"
+    Write-Host "[$(Get-Date -Format o)] Attempting pip install -e . in $($dir.FullName)"
+    $jobs += Start-Job -Name $jobName -ScriptBlock {
+        param($dirPath, $eggInfoDir)
+        try {
+            Push-Location $dirPath
+            Write-Host "[$(Get-Date -Format o)] Installing editable package in $dirPath"
+            $out = pip install -e . 2>&1
+            $exitCode = $LASTEXITCODE
+            Write-Host "[$(Get-Date -Format o)] Finished $dirPath with exit code $exitCode"
+            if ($exitCode -eq 0) {
+                # Only create detailed log if install succeeded (i.e., is a package)
                 $eggInfo = Get-ChildItem -Path $dirPath -Directory -Filter '*.egg-info' | Select-Object -First 1
                 if ($eggInfo) {
                     $detailLog = Join-Path $eggInfo.FullName 'install.log'
@@ -49,15 +51,15 @@ foreach ($dir in $subdirs) {
                     $detailLog = Join-Path $eggInfoPath 'install.log'
                     Set-Content -Path $detailLog -Value $out
                 }
-                Pop-Location
-                return @{Dir=$dirPath;ExitCode=$exitCode}
-            } catch {
-                $err = $_.Exception.Message
-                Write-Host "[$(Get-Date -Format o)] ERROR in ${dirPath}: $err"
-                return @{Dir=$dirPath;ExitCode=1}
             }
-        } -ArgumentList $dir.FullName, $eggInfoDir
-    }
+            Pop-Location
+            return @{Dir=$dirPath;ExitCode=$exitCode}
+        } catch {
+            $err = $_.Exception.Message
+            Write-Host "[$(Get-Date -Format o)] ERROR in ${dirPath}: $err"
+            return @{Dir=$dirPath;ExitCode=1}
+        }
+    } -ArgumentList $dir.FullName, $eggInfoDir
 }
 
 # Wait for all jobs to finish
@@ -72,12 +74,29 @@ if ($jobs.Count -gt 0) {
 
 # Summarize results
 $failures = $results | Where-Object { $_.ExitCode -ne 0 }
+$summaryLog = Join-Path $eggInfoDir 'install-summary.log'
+$summaryLines = @()
+if ($results.Count -gt 0) {
+    $summaryLines += "Install summary for editable Python packages:`n"
+    foreach ($result in $results) {
+        $status = if ($result.ExitCode -eq 0) { 'SUCCESS' } else { 'FAILED' }
+        $summaryLines += "$($result.Dir): $status"
+    }
+    $summaryLines += ""
+    if ($failures.Count -gt 0) {
+        $summaryLines += "Some installs failed. See individual install.log files for details."
+    } else {
+        $summaryLines += "All editable Python packages installed successfully."
+    }
+    Set-Content -Path $summaryLog -Value $summaryLines
+    Write-Host "Install summary written to $summaryLog"
+}
 if ($failures.Count -gt 0) {
     Write-Host "Some installs failed. See $logFile for details."
     foreach ($fail in $failures) {
         Write-Host "FAILED: $($fail.Dir)"
     }
-    exit 1
+    # Do not exit with error code, just summarize
 } else {
     Write-Host "All editable Python packages installed successfully. .egg-info stored in $eggInfoDir."
     Write-Host "See $logFile for details."
