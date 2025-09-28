@@ -1,7 +1,7 @@
 # Ignore Python egg-info metadata
 .python-egg-info/
 # Common egg-info directory for editable Python installs
-.egg-info/
+*.egg-info/
 
 # Ignore virtual environment directory
 .venv/
