@@ -1,0 +1,6 @@
+pyproject.toml
+Buddhi.egg-info/PKG-INFO
+Buddhi.egg-info/SOURCES.txt
+Buddhi.egg-info/dependency_links.txt
+Buddhi.egg-info/requires.txt
+Buddhi.egg-info/top_level.txt

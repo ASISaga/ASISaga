@@ -1,3 +1,8 @@
+# Ignore Python egg-info metadata
+.python-egg-info/
+# Common egg-info directory for editable Python installs
+.egg-info/
+
 # Ignore virtual environment directory
 .venv/
 ASISaga.code-workspace
@@ -10,3 +15,4 @@ __pycache__/
 
 # Node.js dependencies
 node_modules/
+

@@ -1,0 +1,48 @@
+Obtaining file:///C:/Development/ASISaga/Buddhi
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting Poet@ git+https://github.com/ASISaga/Poet.git (from Buddhi==0.1.0)
+  Cloning https://github.com/ASISaga/Poet.git to c:\users\shabeer dewan\appdata\local\temp\pip-install-wgf_1by1\poet_ecf54f77e9254e5a945b435d3005f9d7
+  Running command git clone --filter=blob:none --quiet https://github.com/ASISaga/Poet.git 'C:\Users\Shabeer Dewan\AppData\Local\Temp\pip-install-wgf_1by1\poet_ecf54f77e9254e5a945b435d3005f9d7'
+  Resolved https://github.com/ASISaga/Poet.git to commit 888b7640ed87ece5820b6d70869dc2f41f5c7691
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  Getting requirements to build wheel did not run successfully.
+  exit code: 1
+  
+  [14 lines of output]
+  error: Multiple top-level packages discovered in a flat-layout: ['Samples', 'Aurelion', 'Community'].
+  
+  To avoid accidental inclusion of unwanted files or directories,
+  setuptools will not proceed with this build.
+  
+  If you are trying to create a single distribution with multiple packages
+  on purpose, you should not rely on automatic discovery.
+  Instead, consider the following options:
+  
+  1. set up custom discovery (`find` directive with `include` or `exclude`)
+  2. use a `src-layout`
+  3. explicitly set `py_modules` or `packages` with a list of names
+  
+  To find more information, look for "package discovery" on setuptools docs.
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+System.Management.Automation.RemoteException
+Getting requirements to build wheel did not run successfully.
+exit code: 1
+System.Management.Automation.RemoteException
+See above for output.
+System.Management.Automation.RemoteException
+note: This error originates from a subprocess, and is likely not a problem with pip.
