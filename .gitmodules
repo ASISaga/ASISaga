@@ -39,9 +39,9 @@
 	path = RealmOfAgents/SelfLearningAgent
 	url = https://github.com/ASISaga/SelfLearningAgent
 
-[submodule "PossibilityDrivenAgent"]
-	path = RealmOfAgents/PossibilityDrivenAgent
-	url = https://github.com/ASISaga/PossibilityDrivenAgent
+[submodule "PossibilityAgent"]
+	path = RealmOfAgents/PossibilityAgent
+	url = https://github.com/ASISaga/PossibilityAgent
 
 [submodule "PurposeDrivenAgent"]
 	path = RealmOfAgents/PurposeDrivenAgent
