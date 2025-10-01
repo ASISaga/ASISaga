@@ -69,6 +69,10 @@
 
 # Boardroom Agents submodules
 
+[submodule "BusinessAgent"]
+	path = Boardroom/BusinessAgent
+	url = https://github.com/ASISaga/BusinessAgent
+
 [submodule "Founder"]
 	path = Boardroom/Founder
 	url = https://github.com/ASISaga/Founder
