@@ -52,7 +52,7 @@
 	url = https://github.com/ASISaga/GitHubAgent
 
 [submodule "AgentOperatingSystem"]
-	path = RealmOfAgents/AgentOperatingSystem
+	path = AgentOperatingSystem
 	url = https://github.com/ASISaga/AgentOperatingSystem
 
 [submodule "LeadershipAgent"]
