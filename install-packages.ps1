@@ -16,7 +16,8 @@ if (-not (Test-Path $eggInfoDir)) {
 
 # Recursively find all directories with a pyproject.toml, excluding .venv
 
-# Define install waves (each wave: list of directories to install in parallel)
+
+# Define install waves (all at once)
 $installWaves = @(
     # Wave 1: PossibilityAgent
     @(Join-Path $workspaceRoot 'RealmOfAgents' 'PossibilityAgent'),
@@ -24,91 +25,132 @@ $installWaves = @(
     @(Join-Path $workspaceRoot 'RealmOfAgents' 'LeadershipAgent'),
     # Wave 3: BusinessAgent
     @(Join-Path $workspaceRoot 'Boardroom' 'BusinessAgent'),
-    # Wave 4: Investor, Founder
-    @(
-        (Join-Path $workspaceRoot 'Boardroom' 'Investor'),
-        (Join-Path $workspaceRoot 'Boardroom' 'Founder')
-    ),
-    # Wave 5: All other packages (auto-discovered, excluding above)
-    @()
+    # Wave 4: Investor, Founder, and all C-Suite packages (single pip command)
+    'WAVE4_SINGLE_PIP',
+    # Wave 5: AgentOperatingSystem only
+    @((Join-Path $workspaceRoot 'AgentOperatingSystem'))
 )
 
-# Find all pyproject.toml dirs, excluding .venv and already listed above
-$allPyprojectDirs = Get-ChildItem -Path $workspaceRoot -Recurse -File -Filter 'pyproject.toml' |
-    Where-Object { $_.FullName -notmatch '\.venv' } |
-    ForEach-Object { $_.DirectoryName } |
-    Sort-Object -Unique
 
-# Add all remaining packages to wave 5
-$alreadyListed = $installWaves[0..3] | ForEach-Object { $_ } | Sort-Object -Unique
-$wave5 = $allPyprojectDirs | Where-Object { $alreadyListed -notcontains $_ }
-$installWaves[4] = $wave5
 
 $results = @()
 
-foreach ($wave in $installWaves) {
-    if ($wave.Count -eq 0) { continue }
-    $jobs = @()
-    foreach ($dirPath in $wave) {
-        if (-not (Test-Path $dirPath)) { continue }
-        $dir = Get-Item $dirPath
-        $jobName = "Install_$($dir.Name)"
-        Write-Host "[$(Get-Date -Format o)] Attempting pip install -e . in $($dir.FullName)"
-        $jobs += Start-Job -Name $jobName -ScriptBlock {
-            param($dirPath, $eggInfoDir)
-            try {
-                Push-Location $dirPath
-                Write-Host "[$(Get-Date -Format o)] Installing editable package in $dirPath"
-                $out = pip install -e . 2>&1
-                $exitCode = $LASTEXITCODE
-                Write-Host "[$(Get-Date -Format o)] Finished $dirPath with exit code $exitCode"
-                $repoName = Split-Path $dirPath -Leaf
-                $logFile = Join-Path $eggInfoDir ("$repoName.log")
-                Set-Content -Path $logFile -Value $out
-                Pop-Location
-                return @{Dir=$dirPath;ExitCode=$exitCode}
-            } catch {
-                $err = $_.Exception.Message
-                Write-Host "[$(Get-Date -Format o)] ERROR in ${dirPath}: $err"
-                return @{Dir=$dirPath;ExitCode=1}
-            }
-        } -ArgumentList $dir.FullName, $eggInfoDir
+# --- Pre-checks for environment ---
+# 1. Check for active virtual environment
+if (-not $env:VIRTUAL_ENV) {
+    Write-Host "[WARN] No Python virtual environment detected. It is recommended to activate a venv before installing packages."
+}
+# 2. Check pip version
+$pipVersion = pip --version 2>$null
+if ($pipVersion -match 'pip (\d+\.\d+)') {
+    $ver = [double]$Matches[1]
+    if ($ver -lt 23) {
+        Write-Host "[WARN] pip version is less than 23. Editable installs with pyproject.toml require pip >= 23."
     }
-    # Wait for all jobs in this wave to finish
-    if ($jobs.Count -gt 0) {
-        $jobs | Wait-Job | Out-Null
-        foreach ($job in $jobs) {
-            $result = Receive-Job $job
-            # If install failed, check if it's because it's not a package (no setup/pyproject)
-            if ($result.ExitCode -ne 0) {
-                $pyprojectPath = Join-Path $result.Dir 'pyproject.toml'
-                $isNotPackage = $false
-                if (Test-Path $pyprojectPath) {
-                    $pyprojectContent = Get-Content $pyprojectPath -Raw
-                    if ($pyprojectContent -notmatch '\[project\]') {
-                        $isNotPackage = $true
-                    } elseif ($pyprojectContent -match 'where\s*=\s*\[\s*"src"\s*\]') {
-                        $srcInit = Join-Path $result.Dir 'src\__init__.py'
-                        if (-not (Test-Path $srcInit)) {
-                            $isNotPackage = $true
-                        }
-                    } else {
-                        $rootInit = Join-Path $result.Dir '__init__.py'
-                        if (-not (Test-Path $rootInit)) {
-                            $isNotPackage = $true
-                        }
-                    }
-                } else {
-                    $isNotPackage = $true
-                }
-                if ($isNotPackage) {
-                    $result.ExitCode = 2  # Mark as 'not a package'
-                }
+}
+
+foreach ($wave in $installWaves) {
+    $dirsToCheck = @()
+    if ($wave -eq 'WAVE4_SINGLE_PIP') {
+        $dirsToCheck = @(
+            (Join-Path $workspaceRoot 'Boardroom' 'Investor'),
+            (Join-Path $workspaceRoot 'Boardroom' 'Founder'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CEO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CFO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CHRO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CMO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'COO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CSO'),
+            (Join-Path $workspaceRoot 'Boardroom' 'C-Suite' 'CTO')
+        )
+    } else {
+        $dirsToCheck = $wave
+    }
+    $validDirs = @()
+    foreach ($dirPath in $dirsToCheck) {
+        $repoName = Split-Path $dirPath -Leaf
+        $logFile = Join-Path $eggInfoDir ("$repoName.precheck.log")
+        $precheckErrors = @()
+        if (-not (Test-Path $dirPath)) {
+            $precheckErrors += "[ERROR] Directory missing: $dirPath"
+        } elseif (-not (Test-Path (Join-Path $dirPath 'pyproject.toml'))) {
+            $precheckErrors += "[ERROR] pyproject.toml missing in $dirPath"
+        } else {
+            $pyproject = Get-Content (Join-Path $dirPath 'pyproject.toml') -Raw
+            if ($pyproject.Length -eq 0) {
+                $precheckErrors += "[ERROR] pyproject.toml is empty in $dirPath"
+            } elseif ($pyproject -notmatch '\[project\]') {
+                $precheckErrors += "[ERROR] pyproject.toml missing [project] section in $dirPath"
+            } elseif ($pyproject -notmatch 'name\s*=') {
+                $precheckErrors += "[ERROR] pyproject.toml missing name field in $dirPath"
+            } elseif ($pyproject -notmatch 'version\s*=') {
+                $precheckErrors += "[ERROR] pyproject.toml missing version field in $dirPath"
             }
-            $results += $result
-            Remove-Job $job
+            $srcDir = Join-Path $dirPath 'src'
+            if (-not (Test-Path $srcDir)) {
+                $precheckErrors += "[ERROR] src directory missing in $dirPath"
+            }
+        }
+        # Check write permissions
+        try {
+            $testFile = Join-Path $eggInfoDir ("testwrite-$repoName.txt")
+            Set-Content -Path $testFile -Value 'test' -ErrorAction Stop
+            Remove-Item $testFile -ErrorAction SilentlyContinue
+        } catch {
+            $precheckErrors += "[ERROR] No write permission to $eggInfoDir for $repoName"
+        }
+        # Check for conflicting install
+        $pkgName = $null
+        if ((Test-Path (Join-Path $dirPath 'pyproject.toml'))) {
+            $pyproject = Get-Content (Join-Path $dirPath 'pyproject.toml') -Raw
+            if ($pyproject -match 'name\s*=\s*"([^"]+)"') {
+                $pkgName = $Matches[1]
+            }
+        }
+        if ($pkgName) {
+            $pipShow = pip show $pkgName 2>$null
+            if ($pipShow) {
+                $precheckErrors += "[WARN] $pkgName already installed in environment."
+            }
+        }
+        if ($precheckErrors.Count -gt 0) {
+            $precheckErrors | Set-Content -Path $logFile
+            $precheckErrors | ForEach-Object { Write-Host $_ }
+        } else {
+            $validDirs += $dirPath
         }
     }
+    if ($validDirs.Count -eq 0) {
+        Write-Host "[WARN] No valid packages found for this wave, skipping pip install."
+        continue
+    }
+    if ($wave -eq 'WAVE4_SINGLE_PIP') {
+        $pipArgs = $validDirs | ForEach-Object { "-e `"$_`"" } | Join-String " "
+        $logFile = Join-Path $eggInfoDir 'wave4-single-pip.log'
+        Write-Host "[$(Get-Date -Format o)] Installing all wave 4 packages in a single pip command (verbose mode)..."
+        $cmd = "pip install -vvv $pipArgs"
+        Write-Host "Running: $cmd"
+        $out = Invoke-Expression $cmd 2>&1
+        Set-Content -Path $logFile -Value $out
+        $exitCode = $LASTEXITCODE
+        foreach ($dir in $validDirs) {
+            $results += @{Dir=$dir;ExitCode=$exitCode}
+        }
+        continue
+    }
+    foreach ($dirPath in $validDirs) {
+        $repoName = Split-Path $dirPath -Leaf
+        $logFile = Join-Path $eggInfoDir ("$repoName.log")
+        Write-Host "[$(Get-Date -Format o)] Installing $dirPath as editable package (verbose mode)..."
+        $cmd = "pip install -vvv -e `"$dirPath`""
+        Write-Host "Running: $cmd"
+        $out = Invoke-Expression $cmd 2>&1
+        Set-Content -Path $logFile -Value $out
+        $exitCode = $LASTEXITCODE
+        $results += @{Dir=$dirPath;ExitCode=$exitCode}
+        Start-Sleep -Seconds 1
+    }
+    # ...existing code...
 }
 
 # Summarize results

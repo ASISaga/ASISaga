@@ -1,3 +1,0 @@
-Poet@ git+https://github.com/ASISaga/Poet.git
-Seeker@ git+https://github.com/ASISaga/Seeker.git
-CSO@ git+https://github.com/ASISaga/CSO.git

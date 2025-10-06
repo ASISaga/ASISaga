@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: Buddhi
-Version: 0.1.0
-Summary: Buddhi - Agent submodules for creative, strategic, and seeker logic.
-Author: ASISaga
-Requires-Python: >=3.8
-Requires-Dist: Poet@ git+https://github.com/ASISaga/Poet.git
-Requires-Dist: Seeker@ git+https://github.com/ASISaga/Seeker.git
-Requires-Dist: CSO@ git+https://github.com/ASISaga/CSO.git
