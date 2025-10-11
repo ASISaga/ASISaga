@@ -1,0 +1,59 @@
+{
+    "ci": {
+        "collect": {
+            "url": [
+                "https://businessinfinity.asisaga.com",
+                "https://businessinfinity.asisaga.com/features",
+                "https://businessinfinity.asisaga.com/trust",
+                "https://businessinfinity.asisaga.com/boardroom",
+                "https://businessinfinity.asisaga.com/enterprise"
+            ],
+            "settings": {
+                "preset": "desktop",
+                "chromeFlags": "--no-sandbox --headless"
+            }
+        },
+        "assert": {
+            "assertions": {
+                "categories:performance": [
+                    "warn",
+                    {
+                        "minScore": 0.8
+                    }
+                ],
+                "categories:accessibility": [
+                    "error",
+                    {
+                        "minScore": 0.95
+                    }
+                ],
+                "categories:best-practices": [
+                    "warn",
+                    {
+                        "minScore": 0.9
+                    }
+                ],
+                "categories:seo": [
+                    "warn",
+                    {
+                        "minScore": 0.9
+                    }
+                ],
+                "color-contrast": "error",
+                "duplicate-id-active": "error",
+                "duplicate-id-aria": "error",
+                "focus-traps": "error",
+                "focusable-controls": "error",
+                "interactive-element-affordance": "error",
+                "logical-tab-order": "error",
+                "managed-focus": "error",
+                "offscreen-content-hidden": "error",
+                "use-landmarks": "error",
+                "visual-order-follows-dom": "error"
+            }
+        },
+        "upload": {
+            "target": "temporary-public-storage"
+        }
+    }
+}

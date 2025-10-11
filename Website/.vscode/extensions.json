@@ -1,0 +1,33 @@
+{
+    "recommendations": [
+        // Accessibility Extensions
+        "deque-systems.vscode-axe-linter",
+        "MaxvanderSchee.web-accessibility",
+        "streetsidesoftware.code-spell-checker",
+        // CSS/SCSS Linting & Validation
+        "stylelint.vscode-stylelint",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-css-peek",
+        // HTML Validation & Accessibility
+        "HTMLHint.vscode-htmlhint",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag",
+        // Color & Contrast Tools
+        "bierner.color-info",
+        "naumovs.color-highlight",
+        "johnpapa.vscode-peacock",
+        // Jekyll Development
+        "ginfuru.ginfuru-vscode-jekyll-syntax",
+        "ms-vscode.vscode-json",
+        // Responsive Design Tools
+        "ms-vscode.live-server",
+        "ritwickdey.LiveServer",
+        // Git & Quality Control
+        "eamodio.gitlens",
+        "github.copilot",
+        "github.copilot-chat",
+        // Markdown & Documentation
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint"
+    ]
+}

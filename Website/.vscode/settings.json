@@ -1,0 +1,59 @@
+{
+    "accessibility.verbosity.notification": "on",
+    // Auto-fix on save
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit",
+        "source.fixAll.eslint": "explicit"
+    },
+    // SCSS/CSS Settings
+    "stylelint.enable": true,
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    "css.validate": false,
+    "scss.validate": false,
+    // HTML Settings
+    "htmlhint.enable": true,
+    "html.validate.scripts": true,
+    "html.validate.styles": true,
+    // Color highlighting for accessibility
+    "color-highlight.enable": true,
+    "color-highlight.markRuler": true,
+    // Jekyll/Liquid syntax
+    "liquid.format.enable": true,
+    "files.associations": {
+        "*.html": "liquid",
+        "*.md": "liquid"
+    },
+    // Auto-complete and IntelliSense
+    "emmet.includeLanguages": {
+        "liquid": "html"
+    },
+    // Accessibility warnings in problems panel
+    "problems.decorations.enabled": true,
+    "problems.showCurrentInStatus": true,
+    // Real-time validation
+    "html.experimental.custom.tags": [
+        "include"
+    ],
+    "html.experimental.custom.attributes": [
+        "aria-label",
+        "aria-labelledby",
+        "aria-describedby",
+        "role"
+    ],
+    // Prevent common accessibility mistakes
+    "html.suggest.html5": true,
+    "css.lint.universalSelector": "warning",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.zeroUnits": "warning",
+    // Color contrast checking
+    "workbench.colorCustomizations": {
+        "editorError.foreground": "#ff0000",
+        "editorWarning.foreground": "#ff8800",
+        "editorInfo.foreground": "#0088ff"
+    },
+    "accessibility.signalOptions.volume": 0.3
+}

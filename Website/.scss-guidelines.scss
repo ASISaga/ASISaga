@@ -1,0 +1,169 @@
+/*
+ACCESSIBILITY-FIRST SCSS ARCHITECTURE
+Use these patterns to prevent layout and accessibility issues
+*/
+
+// ===== MANDATORY ACCESSIBILITY MIXINS =====
+
+// Accessible button mixin (prevents touch target issues)
+@mixin accessible-button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+  }
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Layout container mixin (prevents overlap issues)
+@mixin layout-container {
+  contain: layout style;
+  isolation: isolate;
+}
+
+// High contrast text mixin (prevents color contrast issues)
+@mixin high-contrast-text($bg-color: #ffffff) {
+  @if lightness($bg-color) > 50% {
+    color: #212529; // Dark text on light background
+  } @else {
+    color: #ffffff; // Light text on dark background
+  }
+  text-shadow: none; // Never use text-shadow
+}
+
+// Responsive grid mixin (prevents layout issues)
+@mixin responsive-grid($min-width: 300px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: 2rem;
+  @include layout-container;
+}
+
+// Focus indicator mixin (mandatory for interactive elements)
+@mixin focus-indicator($color: #0066cc) {
+  &:focus {
+    outline: 3px solid $color;
+    outline-offset: 2px;
+  }
+}
+
+// ===== UTILITY CLASSES =====
+
+// Screen reader only text
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Focus visible for skip links
+.focus-visible {
+  &:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    background: #000 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    z-index: 9999 !important;
+  }
+}
+
+// ===== MANDATORY BASE CLASSES =====
+
+.layout-container {
+  @include layout-container;
+}
+
+.section-container {
+  @include layout-container;
+}
+
+.grid-container {
+  @include layout-container;
+  display: grid;
+}
+
+.article-container {
+  @include layout-container;
+}
+
+.list-container {
+  @include layout-container;
+}
+
+.accessible-button {
+  @include accessible-button;
+}
+
+.accessible-link {
+  @include high-contrast-text;
+  @include focus-indicator;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ===== COLOR SYSTEM (WCAG AA COMPLIANT) =====
+
+// Primary colors with guaranteed contrast
+$primary-dark: #1a237e;        // For light backgrounds
+$primary-light: #ffffff;       // For dark backgrounds
+$text-primary: #212529;        // High contrast text
+$text-secondary: #495057;      // Medium contrast text (4.5:1+)
+$text-muted: rgba(33, 37, 41, 0.75); // Muted but accessible
+$background-light: #ffffff;
+$background-dark: #212529;
+
+// Error colors
+$error-color: #dc3545;
+$success-color: #28a745;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+
+// ===== RESPONSIVE BREAKPOINTS =====
+$mobile: 375px;
+$tablet: 768px; 
+$desktop: 1440px;
+
+// ===== FORBIDDEN PATTERNS =====
+/*
+NEVER USE THESE PATTERNS (They cause accessibility/layout issues):
+
+❌ @extend (Jekyll build errors)
+❌ text-shadow (contrast issues)
+❌ opacity < 0.9 for text (contrast issues)
+❌ rgba() with low alpha for text
+❌ Elements without contain/isolation
+❌ Interactive elements < 44px
+❌ Missing focus indicators
+❌ Nested landmarks
+*/

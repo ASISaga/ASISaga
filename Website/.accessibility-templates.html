@@ -1,0 +1,92 @@
+<!-- 
+ACCESSIBILITY-FIRST COMPONENT TEMPLATES
+Use these templates to prevent common accessibility issues
+-->
+
+<!-- BUTTON TEMPLATE -->
+<button class="btn btn-primary accessible-button" type="button" aria-label="Descriptive action name"
+    style="min-height: 44px; min-width: 44px;">
+    Button Text
+</button>
+
+<!-- LINK TEMPLATE -->
+<a href="/target-page" class="accessible-link" aria-label="Descriptive link purpose">
+    Link Text
+</a>
+
+<!-- CARD COMPONENT TEMPLATE -->
+<article class="card article-container" role="article" aria-labelledby="card-title-1">
+    <h3 id="card-title-1" class="card-title">Card Title</h3>
+    <p class="card-description">Card content description</p>
+    <a href="/details" class="btn btn-outline-primary" aria-label="Learn more about Card Title">
+        Learn More
+    </a>
+</article>
+
+<!-- FORM TEMPLATE -->
+<form class="accessible-form" aria-labelledby="form-title">
+    <h2 id="form-title">Form Title</h2>
+
+    <div class="form-group">
+        <label for="input-name" class="form-label">
+            Full Name <span aria-hidden="true">*</span>
+        </label>
+        <input type="text" id="input-name" name="fullName" class="form-control" required aria-describedby="name-help"
+            style="min-height: 44px;">
+        <div id="name-help" class="form-text">Enter your full legal name</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="min-height: 44px;">
+        Submit Form
+    </button>
+</form>
+
+<!-- NAVIGATION TEMPLATE -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <ul class="navbar-nav" role="menubar">
+        <li class="nav-item" role="none">
+            <a class="nav-link" href="/" role="menuitem">Home</a>
+        </li>
+        <li class="nav-item" role="none">
+            <a class="nav-link" href="/features" role="menuitem">Features</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- MODAL TEMPLATE -->
+<div class="modal fade" id="accessible-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Modal Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close modal">
+                </button>
+            </div>
+            <div class="modal-body">
+                Modal content here
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SKIP NAVIGATION (REQUIRED ON EVERY PAGE) -->
+<a href="#skip-target" class="sr-only focus-visible accessible-link">
+    Skip to main content
+</a>
+
+<!-- LANDMARK STRUCTURE TEMPLATE -->
+
+<body class="layout-container">
+    <header class="site-header" role="banner" aria-label="Site header">
+        <!-- Site navigation and branding -->
+    </header>
+
+    <main class="site-main" id="skip-target" tabindex="-1" role="main">
+        <!-- Page content -->
+    </main>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <!-- Footer content -->
+    </footer>
+</body>
