@@ -33,12 +33,12 @@ module.exports = {
     "declaration-block-no-redundant-longhand-properties": true,
     "selector-pseudo-class-no-unknown": [true, {
       ignorePseudoClasses: ["focus-visible"]     // Allow focus-visible
-    }]
+    }],
 
     // Disabled rules (too noisy for existing codebase):
     // "a11y/media-prefers-reduced-motion": null,
     // "a11y/selector-pseudo-class-focus": null,  
     // "unit-disallowed-list": null,
-    // "scss/no-global-function-names": null
+    "scss/no-global-function-names": null
   }
 };
