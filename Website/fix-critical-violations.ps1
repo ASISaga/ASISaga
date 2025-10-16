@@ -17,7 +17,7 @@ function Fix-ExtendViolations {
     # Common @extend patterns that can be safely replaced
     $replacements = @{
         '@extend .container;' = '// Replaced @extend with direct styles for Jekyll compatibility
-    @include container-fluid();'
+    @include make-container();'
         '@extend .row;'       = '// Replaced @extend with direct styles
     display: flex;
     flex-wrap: wrap;'

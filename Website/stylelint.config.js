@@ -39,6 +39,7 @@ module.exports = {
     // "a11y/media-prefers-reduced-motion": null,
     // "a11y/selector-pseudo-class-focus": null,  
     // "unit-disallowed-list": null,
+    // Disabled for Jekyll compatibility: Jekyll only supports global lighten/darken, not color.adjust
     "scss/no-global-function-names": null
   }
 };

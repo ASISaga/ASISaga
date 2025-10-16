@@ -25,7 +25,7 @@ function Fix-SyntaxErrors {
     $content = $content -replace 'display: flex;\s*\n\s*display: flex;', 'display: flex;'
     
     # Fix any other malformed lines that lack semicolons
-    $content = $content -replace '(\s+)@include container-fluid\(\)$', '$1@include container-fluid();'
+    $content = $content -replace '(\s+)@include container-fluid\(\)$', '$1@include make-container();'
     $content = $content -replace '(\s+)flex: 1 0 0%$', '$1flex: 1 0 0%;'
     $content = $content -replace '(\s+)min-width: 0$', '$1min-width: 0;'
     $content = $content -replace '(\s+)flex-wrap: wrap$', '$1flex-wrap: wrap;'
