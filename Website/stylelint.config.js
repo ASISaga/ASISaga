@@ -35,6 +35,9 @@ module.exports = {
       ignorePseudoClasses: ["focus-visible"]     // Allow focus-visible
     }],
 
+    // SCSS: Detect undefined mixins
+    "scss/no-undefined-mixin": true,
+
     // Disabled rules (too noisy for existing codebase):
     // "a11y/media-prefers-reduced-motion": null,
     // "a11y/selector-pseudo-class-focus": null,  
