@@ -18,9 +18,25 @@ function Commit-And-Push($path, $message) {
     $status = git status --porcelain
     if (-not [string]::IsNullOrWhiteSpace($status)) {
         Write-Host "📂 Processing repo: $path" -ForegroundColor Cyan
-        git add .
-        git commit -m $message
-        git push
+        
+        # Add all changes including submodules
+        git add -A
+        
+        # Commit with error handling
+        $commitOutput = git commit -m $message 2>&1
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "  ✓ Committed changes" -ForegroundColor Green
+            
+            # Push with error handling
+            $pushOutput = git push 2>&1
+            if ($LASTEXITCODE -eq 0) {
+                Write-Host "  ✓ Pushed to remote" -ForegroundColor Green
+            } else {
+                Write-Host "  ⚠️ Push failed: $pushOutput" -ForegroundColor Yellow
+            }
+        } else {
+            Write-Host "  ⚠️ Commit failed or nothing to commit: $commitOutput" -ForegroundColor Yellow
+        }
     }
     else {
         Write-Host "✔️ Clean repo, skipping: $path" -ForegroundColor DarkGray
