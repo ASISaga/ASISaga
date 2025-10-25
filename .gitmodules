@@ -150,3 +150,6 @@
 	path = Boardroom/Mentor
 	url = https://github.com/ASISaga/Mentor.git
 
+[submodule "Buddhi"]
+	path = Buddhi
+	url = https://github.com/ASISaga/Buddhi
