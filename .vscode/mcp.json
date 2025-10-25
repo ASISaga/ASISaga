@@ -13,8 +13,13 @@
       "type": "http"
     },
     "asana": {
-    "command": "npx",
-    "args": ["mcp-remote", "https://mcp.asana.com/sse"]
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.asana.com/sse"]
+    },
+    "buddhi-mcp": {
+      "command": "python",
+      "args": ["-m", "Buddhi.server"],
+      "cwd": "${workspaceFolder}/Buddhi/src"
     }
   }
 }
