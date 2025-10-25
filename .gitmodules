@@ -130,9 +130,6 @@
 	path = MCP/mcp-reddit
 	url = https://github.com/ASISaga/mcp-reddit
 
-[submodule "QualityMCP"]
-	path = MCP/QualityMCP
-	url = https://github.com/ASISaga/QualityMCP
 
 # Business Infinity submodules
 [submodule "BusinessInfinity"]
