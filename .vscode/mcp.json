@@ -12,14 +12,16 @@
       "url": "https://api.githubcopilot.com/mcp/",
       "type": "http"
     },
-    "asana": {
-      "command": "npx",
-      "args": ["mcp-remote", "https://mcp.asana.com/sse"]
-    },
-    "buddhi-mcp": {
-      "command": "python",
-      "args": ["-m", "Buddhi.server"],
-      "cwd": "${workspaceFolder}/Buddhi/src"
-    }
+		"microsoft/playwright-mcp": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			]
+		},
+		"microsoftdocs/mcp": {
+			"type": "http",
+			"url": "https://learn.microsoft.com/api/mcp"
+		}
   }
 }

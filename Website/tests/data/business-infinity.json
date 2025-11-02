@@ -1,0 +1,25 @@
+{
+    "name": "Business Infinity",
+    "baseUrl": "https://businessinfinity.asisaga.com",
+    "urls": [
+        "/",
+        "/features",
+        "/trust",
+        "/about",
+        "/boardroom",
+        "/dashboard",
+        "/mentor",
+        "/onboarding",
+        "/chat",
+        "/profile",
+        "/enterprise",
+        "/entrepreneur",
+        "/startup",
+        "/network",
+        "/framework",
+        "/roadmap",
+        "/pitch",
+        "/bmc",
+        "/privacy-policy"
+    ]
+}

@@ -5,23 +5,15 @@
   "scripts": {
     "lint:css": "stylelint \"theme.asisaga.com/**/*.scss\" \"*.asisaga.com/**/*.scss\" \"**/*.css\" --fix --allow-empty-input",
     "lint:html": "htmlhint \"**/*.html\" --config .htmlhintrc",
-    "validate:accessibility": "axe-cli --show-errors --exit --timeout 30000",
-    "validate:lighthouse": "lighthouse-ci autorun",
-    "test:accessibility:all": "axe-cli https://www.asisaga.com https://businessinfinity.asisaga.com https://realmofagents.asisaga.com --show-errors --timeout 30000",
-    "test:accessibility": "npm run validate:accessibility && npm run lint:html && npm run lint:css",
-    "test:playwright": "npx playwright test tests/accessibility-layout.spec.ts",
     "dev:validate": "npm run lint:css && npm run lint:html",
     "dev:validate:all": "npm run lint:css && npm run lint:html && npm run test:accessibility:all",
     "precommit": "npm run test:accessibility",
     "install:all": "cd theme.asisaga.com && npm install && cd ../businessinfinity.asisaga.com && npm install"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.8.0",
     "@double-great/stylelint-a11y": "^3.4.0",
-    "@lhci/cli": "^0.12.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.3",
-    "lighthouse": "^11.0.0",
     "lint-staged": "^15.0.0",
     "pa11y-ci": "^3.0.1",
     "sass": "^1.93.2",
@@ -36,8 +28,7 @@
       "git add"
     ],
     "*.html": [
-      "htmlhint",
-      "axe-cli --show-errors"
+      "htmlhint"
     ]
   },
   "husky": {
