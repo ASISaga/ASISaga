@@ -8,6 +8,12 @@
           "${workspaceFolder}/Manas"
         ]
     },
+    "buddhi-mcp": {
+    "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "args": ["-m", "Buddhi.server"],
+    "cwd": "${workspaceFolder}/Buddhi/src"
+    },
+
     "github-mcp-server": {
       "url": "https://api.githubcopilot.com/mcp/",
       "type": "http"

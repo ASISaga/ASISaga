@@ -1,8 +1,3 @@
-    "buddhi-mcp": {
-      "command": "python",
-      "args": ["-m", "Buddhi.server"],
-      "cwd": "${workspaceFolder}/Buddhi/src"
-    }
 
     "asana": {
       "command": "npx",
