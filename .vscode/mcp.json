@@ -1,17 +1,21 @@
 {
   "servers": {
-    "manas": {
-        "command": "npx",
-        "args": [
-          "-y",
-          "@modelcontextprotocol/server-filesystem",
-          "${workspaceFolder}/Manas"
-        ]
-    },
     "buddhi-mcp": {
     "command": "${workspaceFolder}/.venv/Scripts/python.exe",
     "args": ["-m", "Buddhi.server"],
     "cwd": "${workspaceFolder}/Buddhi/src"
+    },
+
+    "kb-mcp-server": {
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "txtai_mcp_server",
+        "--embeddings",
+        "${workspaceFolder}/Manas/kb"
+      ],
+      "type": "stdio",
+      "cwd": "${workspaceFolder}/Manas"
     },
 
     "github-mcp-server": {
