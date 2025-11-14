@@ -6,14 +6,9 @@
     "cwd": "${workspaceFolder}/Buddhi/src"
     },
 
-    "kb-mcp-server": {
+    "manas": {
       "command": "${workspaceFolder}/.venv/Scripts/python.exe",
-      "args": [
-        "-m",
-        "txtai_mcp_server",
-        "--embeddings",
-        "${workspaceFolder}/Manas/kb"
-      ],
+      "args": ["-m", "txtai_mcp_server"],
       "type": "stdio",
       "cwd": "${workspaceFolder}/Manas"
     },
