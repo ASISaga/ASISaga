@@ -27,6 +27,10 @@
 		"microsoftdocs/mcp": {
 			"type": "http",
 			"url": "https://learn.microsoft.com/api/mcp"
-		}
+		},
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"]
+    }
   }
 }
