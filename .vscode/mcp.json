@@ -13,6 +13,13 @@
       "cwd": "${workspaceFolder}/Manas"
     },
 
+    "spec-kit-mcp": {
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["-m", "spec_kit_mcp.server"],
+      "type": "stdio",
+      "cwd": "${workspaceFolder}"
+    },
+
     "github-mcp-server": {
       "url": "https://api.githubcopilot.com/mcp/",
       "type": "http"
