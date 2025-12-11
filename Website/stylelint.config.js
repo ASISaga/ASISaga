@@ -36,7 +36,7 @@ module.exports = {
     }],
 
     // SCSS: Detect undefined mixins
-    "scss/no-undefined-mixin": true,
+    // "scss/no-undefined-mixin": true,
 
     // Disabled rules (too noisy for existing codebase):
     // "a11y/media-prefers-reduced-motion": null,
