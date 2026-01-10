@@ -150,3 +150,7 @@
 [submodule "Buddhi"]
 	path = Buddhi
 	url = https://github.com/ASISaga/Buddhi
+
+[submodule "Genesis"]
+	path = Genesis
+	url = https://github.com/ASISaga/Genesis
