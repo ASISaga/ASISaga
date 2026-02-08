@@ -30,6 +30,10 @@
 	path = Website/aurelion.asisaga.com
 	url = https://github.com/ASISaga/aurelion.asisaga.com
 
+[submodule "yoga.asisaga.com"]
+	path = Website/yoga.asisaga.com
+	url = https://github.com/ASISaga/yoga.asisaga.com
+
 # Realm of Agents submodules
 [submodule "FineTunedLLM"]
 	path = RealmOfAgents/FineTunedLLM
