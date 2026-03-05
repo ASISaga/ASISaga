@@ -58,7 +58,7 @@
 
 [submodule "business-infinity"]
 	path = business-infinity
-	url = https://github.com/ASISaga/business-infinity.git
+	url = https://github.com/ASISaga/business-infinity
 
 [submodule "aos-mcp-servers"]
 	path = aos-mcp-servers
