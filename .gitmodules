@@ -121,3 +121,9 @@
 [submodule "business-infinity"]
 path = business-infinity
 url = https://github.com/ASISaga/business-infinity.git
+[submodule "aos-mcp-servers"]
+	path = aos-mcp-servers
+	url = https://github.com/ASISaga/aos-mcp-servers
+[submodule "aos-realm-of-agents"]
+	path = aos-realm-of-agents
+	url = https://github.com/ASISaga/aos-realm-of-agents
