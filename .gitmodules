@@ -67,3 +67,6 @@
 [submodule "aos-realm-of-agents"]
 	path = aos-realm-of-agents
 	url = https://github.com/ASISaga/aos-realm-of-agents
+[submodule "AgentOperatingSystem"]
+	path = AgentOperatingSystem
+	url = https://github.com/ASISaga/AgentOperatingSystem
