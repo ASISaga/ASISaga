@@ -1,5 +1,4 @@
 # submodules used by ASI Saga
-# changes would be pushed to the respective repositories
 
 # Website submodules
 [submodule "theme.asisaga.com"]
@@ -34,71 +33,10 @@
 	path = Website/yoga.asisaga.com
 	url = https://github.com/ASISaga/yoga.asisaga.com
 
-# Realm of Agents submodules
-[submodule "FineTunedLLM"]
-	path = RealmOfAgents/FineTunedLLM
-	url = https://github.com/ASISaga/FineTunedLLM
-
-[submodule "SelfLearningAgent"]
-	path = RealmOfAgents/SelfLearningAgent
-	url = https://github.com/ASISaga/SelfLearningAgent
-
-[submodule "PossibilityAgent"]
-	path = RealmOfAgents/PossibilityAgent
-	url = https://github.com/ASISaga/PossibilityAgent
-
-[submodule "PurposeDrivenAgent"]
-	path = RealmOfAgents/PurposeDrivenAgent
-	url = https://github.com/ASISaga/PurposeDrivenAgent
-
-[submodule "GitHubAgent"]
-	path = RealmOfAgents/GitHubAgent
-	url = https://github.com/ASISaga/GitHubAgent
-
-[submodule "AgentOperatingSystem"]
-	path = AgentOperatingSystem
-	url = https://github.com/ASISaga/AgentOperatingSystem
-
-[submodule "LeadershipAgent"]
-	path = RealmOfAgents/LeadershipAgent
-	url = https://github.com/ASISaga/LeadershipAgent
-
-[submodule "Seeker"]
-	path = RealmOfAgents/Seeker
-	url = https://github.com/ASISaga/Seeker
-
-[submodule "Poet"]
-	path = RealmOfAgents/Poet
-	url = https://github.com/ASISaga/Poet
-
-
-# MCP submodules
-[submodule "mcp.asisaga.com"]
-	path = MCP/mcp.asisaga.com
-	url = https://github.com/ASISaga/mcp.asisaga.com
-
-[submodule "ERPNext-MCP"]
-	path = MCP/ERPNext-MCP
-	url = https://github.com/ASISaga/ERPNext-MCP
-
-[submodule "spec-kit-mcp"]
-	path = MCP/spec-kit-mcp
-	url = https://github.com/ASISaga/spec-kit-mcp
-
-[submodule "linkedin-mcp-server"]
-	path = MCP/linkedin-mcp-server
-	url = https://github.com/ASISaga/linkedin-mcp-server
-
-[submodule "mcp-reddit"]
-	path = MCP/mcp-reddit
-	url = https://github.com/ASISaga/mcp-reddit
-
-
 # Business Infinity submodules
 [submodule "BusinessInfinity"]
 	path = BusinessInfinity
 	url = https://github.com/ASISaga/BusinessInfinity
-
 
 # Manas document store submodules
 [submodule "Manas"]
@@ -119,11 +57,13 @@
 	url = https://github.com/ASISaga/Genesis
 
 [submodule "business-infinity"]
-path = business-infinity
-url = https://github.com/ASISaga/business-infinity.git
+	path = business-infinity
+	url = https://github.com/ASISaga/business-infinity.git
+
 [submodule "aos-mcp-servers"]
 	path = aos-mcp-servers
 	url = https://github.com/ASISaga/aos-mcp-servers
+
 [submodule "aos-realm-of-agents"]
 	path = aos-realm-of-agents
 	url = https://github.com/ASISaga/aos-realm-of-agents
