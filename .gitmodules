@@ -158,3 +158,7 @@
 [submodule "Genesis"]
 	path = Genesis
 	url = https://github.com/ASISaga/Genesis
+
+[submodule "business-infinity"]
+path = business-infinity
+url = https://github.com/ASISaga/business-infinity.git
