@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@double-great/stylelint-a11y": "^3.4.1",
+    "@figma/plugin-typings": "^1.123.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.0",
