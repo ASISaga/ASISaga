@@ -67,3 +67,7 @@
 [submodule "agent-operating-system"]
 	path = agent-operating-system
 	url = https://github.com/ASISaga/agent-operating-system
+
+[submodule "Website/Blueprint2Code"]
+	path = Website/Blueprint2Code
+	url = https://github.com/ASISage/Blueprint2Code.git
