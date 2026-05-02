@@ -17,9 +17,9 @@
 	path = Website/saga.asisaga.com
 	url = https://github.com/ASISaga/saga.asisaga.com
 
-[submodule "businessinfinity.asisaga.com"]
-	path = Website/businessinfinity.asisaga.com
-	url = https://github.com/ASISaga/businessinfinity.asisaga.com
+[submodule "boardroom.asisaga.com"]
+	path = Website/boardroom.asisaga.com
+	url = https://github.com/ASISaga/boardroom.asisaga.com
 
 [submodule "genesis.asisaga.com"]
 	path = Website/genesis.asisaga.com
@@ -52,9 +52,9 @@
 	path = Genesis
 	url = https://github.com/ASISaga/Genesis
 
-[submodule "business-infinity"]
-	path = business-infinity
-	url = https://github.com/ASISaga/business-infinity
+[submodule "boardroom"]
+	path = boardroom
+	url = https://github.com/ASISaga/boardroom
 
 [submodule "mcp"]
 	path = mcp
