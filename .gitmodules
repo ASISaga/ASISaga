@@ -71,3 +71,6 @@
 [submodule "Website/Blueprint2Code"]
 	path = Website/Blueprint2Code
 	url = https://github.com/ASISage/Blueprint2Code.git
+[submodule "architect-agent"]
+	path = architect-agent
+	url = https://github.com/ASISaga/architect-agent.git
