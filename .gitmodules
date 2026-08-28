@@ -74,3 +74,9 @@
 [submodule "architect-agent"]
 	path = architect-agent
 	url = https://github.com/ASISaga/architect-agent.git
+[submodule "boardroom-core"]
+	path = boardroom-core
+	url = git@github.com:ASISaga/boardroom-core.git
+[submodule "boardroom-orchestration"]
+	path = boardroom-orchestration
+	url = git@github.com:ASISaga/boardroom-orchestration.git
